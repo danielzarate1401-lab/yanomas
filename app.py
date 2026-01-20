@@ -41,7 +41,7 @@ historia = {
         "texto": "Hola, amorcito, es curioso, nos conocimos juso cuando tu estabas programando... ❤️",
         "imagen": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000", # Reemplaza con tu URL
         "siguiente": 1
-    },
+    }
     1: {
         "personaje": "Daniel",
         "texto": "Tenias razon, es muy divertido cuando aprendes a hacerlo, cof cof ia.",
