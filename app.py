@@ -1,67 +1,92 @@
 import streamlit as st
 
-# Configuración visual de la página
-st.set_page_config(page_title="Nuestra Historia", page_icon="❤️")
+# --- CONFIGURACIÓN ESTÉTICA ---
+st.set_page_config(page_title="felices 5 meses, mi niño lindo, te amo", layout="wide")
 
-# Estilo personalizado para que se vea más como una novela visual
+# Inyectamos CSS para cambiar el look total de la página
 st.markdown("""
     <style>
-    .main {
-        background-color: #fce4ec;
+    /* Cambiar el fondo de toda la página */
+    .stApp {
+        background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
     }
-    .stButton>button {
-        width: 100%;
-        border-radius: 20px;
-        height: 3em;
-        background-color: #f06292;
-        color: white;
+    
+    /* Estilo para la caja de diálogo */
+    .dialogo-box {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 3px solid #f06292;
+        border-radius: 15px;
+        padding: 20px;
+        margin-top: 20px;
+        color: #333;
+        font-family: 'Verdana', sans-serif;
+        font-size: 20px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Estilo para el nombre del personaje */
+    .nombre-personaje {
+        font-weight: bold;
+        color: #d81b60;
+        margin-bottom: 5px;
+        font-size: 24px;
     }
     </style>
     """, unsafe_allow_html=True)
 
-# --- BASE DE DATOS DE LA HISTORIA ---
-# Aquí puedes añadir más escenas fácilmente
+# --- BASE DE DATOS MEJORADA ---
 historia = {
     0: {
-        "personaje": "Protagonista",
-        "texto": "Hola, felices 5 mesesitos mi niño... ❤️",
-        "imagen": "https://via.placeholder.com/600x400?text=Imagen+Tierna+1", 
-        "audio": None, # Puedes poner un link a un mp3 aquí
+        "personaje": "Daniel",
+        "texto": "Hola, amorcito, es curioso, nos conocimos juso cuando tu estabas programando... ❤️",
+        "imagen": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000", # Reemplaza con tu URL
         "siguiente": 1
     },
     1: {
-        "personaje": "Protagonista",
-        "texto": "Ha sido un tiempo maravilloso a tu lado. ¿Quieres ver una sorpresa?",
-        "imagen": "https://via.placeholder.com/600x400?text=Imagen+Tierna+2",
+        "personaje": "Daniel",
+        "texto": "Tenias razon, es muy divertido cuando aprendes a hacerlo, cof cof ia.",
+        "imagen": "https://images.unsplash.com/photo-1516589174184-c68526514b4c?q=80&w=1000",
         "siguiente": 2
-    },
+    }
     2: {
-        "personaje": "Fin",
-        "texto": "¡Te amo mucho! Gracias por estos 5 meses.",
-        "imagen": "https://via.placeholder.com/600x400?text=Final+Feliz",
-        "siguiente": None
+        "personaje": "Daniel",
+        "texto": "Resulta que, si quiero ser lo mejor para ti, debo aprender a programar como tu.",
+        "imagen": "https://images.unsplash.com/photo-1516589174184-c68526514b4c?q=80&w=1000",
+        "siguiente": 3
+    }
+    3: {
+        "personaje": "Daniel",
+        "texto": "este año sera uno muy bueno donde lograremos mucho por ambos, mi niño.",
+        "imagen": "https://images.unsplash.com/photo-1516589174184-c68526514b4c?q=80&w=1000",
+        "siguiente": 4
     }
 }
 
-# --- LÓGICA DEL JUEGO ---
+# Lógica de estado
 if 'paso' not in st.session_state:
     st.session_state.paso = 0
 
 escena = historia[st.session_state.paso]
 
-# Mostrar Imagen
-st.image(escena["imagen"], use_container_width=True)
+# --- RENDERIZADO ---
+col1, col2, col3 = st.columns([1, 2, 1]) # Centrar contenido
 
-# Caja de Diálogo
-st.subheader(f"**{escena['personaje']}:**")
-st.write(escena["texto"])
+with col2:
+    # Mostrar Imagen con bordes redondeados (vía HTML)
+    st.markdown(f'<img src="{escena["imagen"]}" style="width:100%; border-radius:20px; border: 5px solid white;">', unsafe_allow_html=True)
+    
+    # Caja de diálogo estilizada
+    st.markdown(f"""
+        <div class="dialogo-box">
+            <div class="nombre-personaje">{escena['personaje']}</div>
+            {escena['texto']}
+        </div>
+    """, unsafe_allow_html=True)
 
-# Botón para avanzar
-if escena["siguiente"] is not None:
-    if st.button("Siguiente ➔"):
-        st.session_state.paso = escena["siguiente"]
-        st.rerun()
-else:
-    if st.button("Volver a empezar"):
-        st.session_state.paso = 0
-        st.rerun()
+    st.write("") # Espacio
+    
+    # Botón centrado
+    if st.button("Continuar"):
+        if escena["siguiente"] is not None:
+            st.session_state.paso = escena["siguiente"]
+            st.rerun()
