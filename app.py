@@ -41,19 +41,19 @@ historia = {
         "texto": "Hola, amorcito, es curioso, nos conocimos juso cuando tu estabas programando... ❤️",
         "imagen": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000", # Reemplaza con tu URL
         "siguiente": 1
-    }
+    },
     1: {
         "personaje": "Daniel",
         "texto": "Tenias razon, es muy divertido cuando aprendes a hacerlo, cof cof ia.",
         "imagen": "https://images.unsplash.com/photo-1516589174184-c68526514b4c?q=80&w=1000",
         "siguiente": 2
-    }
+    },
     2: {
         "personaje": "Daniel",
         "texto": "Resulta que, si quiero ser lo mejor para ti, debo aprender a programar como tu.",
         "imagen": "https://images.unsplash.com/photo-1516589174184-c68526514b4c?q=80&w=1000",
         "siguiente": 3
-    }
+    },
     3: {
         "personaje": "Daniel",
         "texto": "este año sera uno muy bueno donde lograremos mucho por ambos, mi niño.",
