@@ -45,19 +45,19 @@ historia = {
     1: {
         "personaje": "Daniel",
         "texto": "Tenias razon, es muy divertido cuando aprendes a hacerlo, cof cof ia.",
-        "imagen": "https://images.unsplash.com/photo-1516589174184-c68526514b4c?q=80&w=1000",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg",
         "siguiente": 2
     },
     2: {
         "personaje": "Daniel",
         "texto": "Resulta que, si quiero ser lo mejor para ti, debo aprender a programar como tu.",
-        "imagen": "https://images.unsplash.com/photo-1516589174184-c68526514b4c?q=80&w=1000",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg",
         "siguiente": 3
     },
     3: {
         "personaje": "Daniel",
         "texto": "este año sera uno muy bueno donde lograremos mucho por ambos, mi niño.",
-        "imagen": "https://images.unsplash.com/photo-1516589174184-c68526514b4c?q=80&w=1000",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg",
         "siguiente": 4
     }
 }
