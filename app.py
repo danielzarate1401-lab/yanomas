@@ -67,7 +67,7 @@ historia = {
         "imagen": "TU_URL_PASADO",
         "musica": "TU_URL_MUSICA_NOSTALGICA",
         "siguiente": None 
-    }
+    },
     # ... sigue añadiendo 11, 12, etc.
 
     # --- CAMINO: PLANIFICAR (Empieza en 20) ---
