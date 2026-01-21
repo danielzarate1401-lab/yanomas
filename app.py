@@ -109,34 +109,86 @@ historia = {
     }
 }
 
-# Obtener escena actual
-escena = historia.get(st.session_state.paso, historia[0])
+# --- 5. LÓGICA DE PANTALLAS ---
 
-# --- 4. RENDERIZADO ---
-col1, col2, col3 = st.columns([1, 2, 1])
-
-with col2:
-    clase_anim = "personaje-shake" if escena.get("animacion") == "shake" else ""
-    st.markdown(f'<img src="{escena["imagen"]}" class="{clase_anim}" style="width:100%; border-radius:20px; border: 5px solid white;">', unsafe_allow_html=True)
+if not st.session_state.jugando:
+    # --- PANTALLA DE INICIO ---
+    # Lanzamos el efecto visual al cargar el menú
+    st.snow() 
     
-    st.markdown(f'<div class="dialogo-box"><div class="nombre-personaje">{escena["personaje"]}</div>{escena["texto"]}</div>', unsafe_allow_html=True)
-    
+    st.write("") 
     st.write("")
+    col1, col2, col3 = st.columns([1, 2, 1])
+    
+    with col2:
+        # Imagen de portada
+        st.image("https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true", use_container_width=True)
+        
+        # Título Estilizado
+        st.markdown("""
+            <h1 style='text-align: center; color: #d81b60; font-family: "Brush Script MT", cursive; font-size: 60px;'>
+                Nuestra Historia ❤️
+            </h1>
+            <p style='text-align: center; font-size: 22px; color: #333;'>
+                Un viaje por nuestros primeros 5 meses
+            </p>
+        """, unsafe_allow_html=True)
+        
+        st.write("")
+        if st.button("✨ COMENZAR AVENTURA ✨", use_container_width=True):
+            st.session_state.jugando = True
+            st.rerun()
 
-    if "opciones" in escena:
-        cols = st.columns(len(escena["opciones"]))
-        for i, opt in enumerate(escena["opciones"]):
-            if cols[i].button(opt["texto"]):
-                st.session_state.paso = opt["destino"]
-                st.rerun()
-    else:
-        siguiente = escena.get("siguiente")
-        if siguiente is not None:
-            if st.button("Continuar ➔"):
-                st.session_state.paso = siguiente
-                st.rerun()
+else:
+    # --- PANTALLA DE JUEGO ---
+    # Buscamos la escena actual (si no existe, va a la 0)
+    escena = historia.get(st.session_state.paso, historia[0])
+    
+    # Control de Música: Solo cambia si el link es distinto
+    if escena.get("musica") != st.session_state.musica_actual:
+        st.session_state.musica_actual = escena.get("musica")
+        if escena.get("musica"):
+            st.audio(escena["musica"], format="audio/mp3", autoplay=True)
+
+    # Diseño de la Escena
+    c1, c2, c3 = st.columns([1, 2, 1])
+    
+    with c2:
+        # Imagen con efecto Shake si aplica
+        clase_anim = "personaje-shake" if escena.get("animacion") == "shake" else ""
+        st.markdown(f'''
+            <img src="{escena["imagen"]}" 
+                 class="{clase_anim}" 
+                 style="width:100%; border-radius:20px; border: 5px solid white; box-shadow: 0px 10px 30px rgba(0,0,0,0.2);">
+        ''', unsafe_allow_html=True)
+        
+        # Caja de Texto
+        st.markdown(f"""
+            <div class="dialogo-box">
+                <div class="nombre-personaje">{escena['personaje']}</div>
+                {escena['texto']}
+            </div>
+        """, unsafe_allow_html=True)
+
+        st.write("")
+
+        # Lógica de Botones (Opciones vs Continuar)
+        if "opciones" in escena:
+            cols_btn = st.columns(len(escena["opciones"]))
+            for i, opt in enumerate(escena["opciones"]):
+                if cols_btn[i].button(opt["texto"], use_container_width=True):
+                    st.session_state.paso = opt["destino"]
+                    st.rerun()
         else:
-            if st.button("Finalizar ❤️"):
-                st.balloons()
-                st.session_state.paso = 0
-                st.rerun()
+            sig = escena.get("siguiente")
+            if sig is not None:
+                if st.button("Continuar ➔", use_container_width=True):
+                    st.session_state.paso = sig
+                    st.rerun()
+            else:
+                # Botón Final que regresa al menú
+                if st.button("Finalizar con Amor ❤️", use_container_width=True):
+                    st.balloons()
+                    st.session_state.paso = 0
+                    st.session_state.jugando = False # Regresa a la pantalla de inicio
+                    st.rerun()
