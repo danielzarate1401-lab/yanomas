@@ -66,8 +66,8 @@ historia = {
         "texto": "Elegiste recordar... Vamos a dar un viaje por estos 5 meses.",
         "imagen": "TU_URL_PASADO",
         "musica": "TU_URL_MUSICA_NOSTALGICA",
-        "siguiente": none 
-    },
+        "siguiente": None 
+    }
     # ... sigue añadiendo 11, 12, etc.
 
     # --- CAMINO: PLANIFICAR (Empieza en 20) ---
@@ -76,7 +76,7 @@ historia = {
         "texto": "¡Me encanta mirar hacia adelante contigo! Esto es lo que sueño...",
         "imagen": "TU_URL_FUTURO",
         "musica": "TU_URL_MUSICA_ALEGRE",
-        "siguiente": none
+        "siguiente": None
     },
     # ... sigue añadiendo 21, 22, etc.
 }
