@@ -1,65 +1,84 @@
-import streamlit as st
-
-# --- CONFIGURACIÓN ESTÉTICA ---
-st.set_page_config(page_title="felices 5 meses, mi niño lindo, te amo", layout="wide")
-
-# Inyectamos CSS para cambiar el look total de la página
-st.markdown("""
-    <style>
-    /* Cambiar el fondo de toda la página */
-    .stApp {
-        background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
-    }
-    
-    /* Estilo para la caja de diálogo */
-    .dialogo-box {
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 3px solid #f06292;
-        border-radius: 15px;
-        padding: 20px;
-        margin-top: 20px;
-        color: #333;
-        font-family: 'Verdana', sans-serif;
-        font-size: 20px;
-        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-    }
-
-    /* Estilo para el nombre del personaje */
-    .nombre-personaje {
-        font-weight: bold;
-        color: #d81b60;
-        margin-bottom: 5px;
-        font-size: 24px;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-# --- BASE DE DATOS MEJORADA ---
+# --- BASE DE DATOS DE TU HISTORIA ---
 historia = {
     0: {
         "personaje": "Daniel",
-        "texto": "Hola, amorcito, es curioso, nos conocimos juso cuando tu estabas programando... ❤️",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true", # Reemplaza con tu URL
+        "texto": "Mi niño bonito, hoy cumplimos un mes más de relación y ahora que es parte de otro año quiero que sea más especial...",
+        "imagen": "TU_URL_AQUÍ",
+        "musica": "TU_URL_MUSICA_INICIO",
         "siguiente": 1
     },
     1: {
         "personaje": "Daniel",
-        "texto": "Tenias razon, es muy divertido cuando aprendes a hacerlo, cof cof ia.",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "texto": "Quiero dar lo mejor de mí para ti y por ambos. Por nuestro futuro y pasado, quiero aprender muchas más cosas...",
+        "imagen": "TU_URL_AQUÍ",
         "siguiente": 2
     },
     2: {
         "personaje": "Daniel",
-        "texto": "Resulta que, si quiero ser lo mejor para ti, debo aprender a programar como tu.",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "texto": "A programar, a vivir, a ser un novio tan bueno como tú.",
+        "imagen": "TU_URL_AQUÍ",
         "siguiente": 3
     },
     3: {
         "personaje": "Daniel",
-        "texto": "este año sera uno muy bueno donde lograremos mucho por ambos, mi niño.",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "texto": "Porque aunque tú digas que no, eres el mejor novio del mundo. ❤️",
+        "imagen": "TU_URL_AQUÍ",
+        "animacion": "shake",
         "siguiente": 4
-    }
+    },
+    4: {
+        "personaje": "Daniel",
+        "texto": "Jamás me había sentido tan querido y correspondido por alguien.",
+        "imagen": "TU_URL_AQUÍ",
+        "siguiente": 5
+    },
+    5: {
+        "personaje": "Daniel",
+        "texto": "Haces que quiera dejar de huir de los problemas. Haces que me sienta bien conmigo mismo.",
+        "imagen": "TU_URL_AQUÍ",
+        "siguiente": 6
+    },
+    6: {
+        "personaje": "Daniel",
+        "texto": "Haces que quiera dar más de mí sin sentirme presionado. Te amo tanto, gracias por ser tú.",
+        "imagen": "TU_URL_AQUÍ",
+        "siguiente": 7
+    },
+    7: {
+        "personaje": "Daniel",
+        "texto": "Mi niño... Bueno, ya que me gusta ser mandoneado, me gustaría que respondas una pregunta:",
+        "imagen": "TU_URL_AQUÍ",
+        "siguiente": 8
+    },
+    8: {
+        "personaje": "Daniel",
+        "texto": "¿Qué quieres hacer ahora?",
+        "imagen": "TU_URL_AQUÍ",
+        "opciones": [
+            {"texto": "Recordar (Pasado)", "destino": 10},
+            {"texto": "Planificar (Futuro)", "destino": 20}
+        ]
+    },
+
+    # --- CAMINO: RECORDAR (Empieza en 10) ---
+    10: {
+        "personaje": "Daniel",
+        "texto": "Elegiste recordar... Vamos a dar un viaje por estos 5 meses.",
+        "imagen": "TU_URL_PASADO",
+        "musica": "TU_URL_MUSICA_NOSTALGICA",
+        "siguiente": none 
+    },
+    # ... sigue añadiendo 11, 12, etc.
+
+    # --- CAMINO: PLANIFICAR (Empieza en 20) ---
+    20: {
+        "personaje": "Daniel",
+        "texto": "¡Me encanta mirar hacia adelante contigo! Esto es lo que sueño...",
+        "imagen": "TU_URL_FUTURO",
+        "musica": "TU_URL_MUSICA_ALEGRE",
+        "siguiente": none
+    },
+    # ... sigue añadiendo 21, 22, etc.
 }
 
 # Lógica de estado
