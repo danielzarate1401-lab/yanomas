@@ -131,6 +131,8 @@ historia = {
 
 # --- 5. LÓGICA DE PANTALLAS ---
 
+# --- 5. LÓGICA DE PANTALLAS ---
+
 if not st.session_state.jugando:
     # PANTALLA DE INICIO
     st.snow()
@@ -146,19 +148,23 @@ if not st.session_state.jugando:
             st.rerun()
 else:
     # --- PANTALLA DE JUEGO ---
-    # 1. Buscamos la escena actual
     escena = historia.get(st.session_state.paso, historia[0])
     
-    # 2. Control de Audio (Solo actúa si la escena tiene la clave "musica")
+    # --- 2. CONTROL DE AUDIO GLOBAL ---
+    # Si la escena tiene música definida, actualizamos el estado
     if "musica" in escena:
-        if escena["musica"] != st.session_state.musica_actual:
-            st.session_state.musica_actual = escena["musica"]
-            if escena["musica"]:
-                st.audio(escena["musica"], format="audio/mp3", autoplay=True, loop=True)
-            else:
-                st.write("🎵 *Silencio*")
+        st.session_state.musica_actual = escena["musica"]
 
-    # 3. Diseño Visual (Columnas)
+    # Reproducimos la música actual SIEMPRE que haya una definida
+    # Esto evita que se corte al cambiar de diálogo
+    if st.session_state.musica_actual and st.session_state.musica_actual != "ninguna":
+        st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
+    
+    # Si quieres una opción de silencio visual cuando no hay música
+    if not st.session_state.musica_actual:
+        st.write("🎵 *Silencio*")
+
+    # --- 3. DISEÑO VISUAL ---
     c1, c2, c3 = st.columns([1, 2, 1])
     
     with c2:
@@ -178,26 +184,22 @@ else:
             </div>
         """, unsafe_allow_html=True)
 
-        st.write("") # Espacio estético
+        st.write("") 
 
-        # --- 4. LÓGICA DE BOTONES (Asegúrate de que esta parte esté así) ---
+        # --- 4. LÓGICA DE BOTONES ---
         if "opciones" in escena:
-            # Si hay bifurcación (Recordar/Planificar)
             cols_btn = st.columns(len(escena["opciones"]))
             for i, opt in enumerate(escena["opciones"]):
                 if cols_btn[i].button(opt["texto"], key=f"btn_opt_{i}", use_container_width=True):
                     st.session_state.paso = opt["destino"]
                     st.rerun()
         else:
-            # Si es un diálogo normal
             sig = escena.get("siguiente")
             if sig is not None:
-                # El botón de Continuar debe estar AQUÍ
                 if st.button("Continuar ➔", key="btn_next", use_container_width=True):
                     st.session_state.paso = sig
                     st.rerun()
             else:
-                # Si es el final de un camino
                 if st.button("Finalizar ❤️", key="btn_final", use_container_width=True):
                     st.balloons()
                     st.session_state.paso = 0
