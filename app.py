@@ -145,26 +145,32 @@ if not st.session_state.jugando:
             st.session_state.jugando = True
             st.rerun()
 else:
-    # PANTALLA DE JUEGO
+    # --- PANTALLA DE JUEGO ---
     escena = historia.get(st.session_state.paso, historia[0])
     
-    # Manejo de audio
-   nueva_musica = escena.get("musica", st.session_state.musica_actual)
-    
-    if "musica" in escena: # Si la escena define música (aunque sea None)
+    # --- GESTIÓN DE AUDIO ---
+    # Si la escena tiene la clave "musica", verificamos si hay que cambiarla
+    if "musica" in escena:
         if escena["musica"] != st.session_state.musica_actual:
             st.session_state.musica_actual = escena["musica"]
             if escena["musica"]:
                 st.audio(escena["musica"], format="audio/mp3", autoplay=True, loop=True)
             else:
-                # Si es None, no renderizamos el audio y la música se detiene al recargar
-                st.write("🎵 *Silencio*")
+                # Si ponemos "musica": None, se detiene al cambiar de escena
+                st.write("🎵 *Silencio dramático*")
 
+    # --- RENDERIZADO ---
     c1, c2, c3 = st.columns([1, 2, 1])
     with c2:
+        # Imagen con efecto Shake si aplica
         clase_anim = "personaje-shake" if escena.get("animacion") == "shake" else ""
-        st.markdown(f'<img src="{escena["imagen"]}" class="{clase_anim}" style="width:100%; border-radius:20px; border: 5px solid white;">', unsafe_allow_html=True)
+        st.markdown(f'''
+            <img src="{escena["imagen"]}" 
+                 class="{clase_anim}" 
+                 style="width:100%; border-radius:20px; border: 5px solid white;">
+        ''', unsafe_allow_html=True)
         
+        # Caja de Texto
         st.markdown(f"""
             <div class="dialogo-box">
                 <div class="nombre-personaje">{escena['personaje']}</div>
@@ -173,11 +179,12 @@ else:
         """, unsafe_allow_html=True)
 
         st.write("")
-        
+
+        # Lógica de Botones
         if "opciones" in escena:
-            cols = st.columns(len(escena["opciones"]))
+            cols_btn = st.columns(len(escena["opciones"]))
             for i, opt in enumerate(escena["opciones"]):
-                if cols[i].button(opt["texto"], key=f"btn_{i}", use_container_width=True):
+                if cols_btn[i].button(opt["texto"], use_container_width=True):
                     st.session_state.paso = opt["destino"]
                     st.rerun()
         else:
@@ -187,8 +194,9 @@ else:
                     st.session_state.paso = sig
                     st.rerun()
             else:
-                if st.button("Finalizar ❤️", use_container_width=True):
+                if st.button("Finalizar con Amor ❤️", use_container_width=True):
                     st.balloons()
                     st.session_state.paso = 0
                     st.session_state.jugando = False
+                    st.session_state.musica_actual = "ninguna"
                     st.rerun()
