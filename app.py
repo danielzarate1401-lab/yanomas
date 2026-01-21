@@ -149,11 +149,16 @@ else:
     escena = historia.get(st.session_state.paso, historia[0])
     
     # Manejo de audio
-    musica = escena.get("musica")
-    if musica != st.session_state.musica_actual:
-        st.session_state.musica_actual = musica
-        if musica:
-            st.audio(musica, format="audio/mp3", autoplay=True)
+   nueva_musica = escena.get("musica", st.session_state.musica_actual)
+    
+    if "musica" in escena: # Si la escena define música (aunque sea None)
+        if escena["musica"] != st.session_state.musica_actual:
+            st.session_state.musica_actual = escena["musica"]
+            if escena["musica"]:
+                st.audio(escena["musica"], format="audio/mp3", autoplay=True, loop=True)
+            else:
+                # Si es None, no renderizamos el audio y la música se detiene al recargar
+                st.write("🎵 *Silencio*")
 
     c1, c2, c3 = st.columns([1, 2, 1])
     with c2:
