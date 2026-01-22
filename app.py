@@ -138,8 +138,7 @@ historia = {
     13: {
         "personaje": "Daniel",
         "texto": "Que te parece?",
-        "imagen": img_def, 
-        "musica": "ninguna"
+        "imagen": img_def,
          "opciones": [
             {"texto": "Menea la chapa remix", "destino": 14},
             {"texto": "Amarillo amarillo platano", "destino": 14}
@@ -209,6 +208,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "¿Qué quieres hacer?",
         "imagen": img_def,
+        "musica": "ninguna",
         "opciones": [
             {"texto": "Recordar", "destino": 25},
             {"texto": "Planificar", "destino": 54}
