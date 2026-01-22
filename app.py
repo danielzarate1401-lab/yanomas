@@ -379,23 +379,138 @@ historia = {
     },
     52: {
         "personaje": "Daniel",
-        "texto": "Te amo. Te amo tanto.",
-        "imagen": img_def,
-        "siguiente": 53
-    },
-    53: {
-        "personaje": "Daniel",
-        "texto": "Mi niño, felices 5 mesesitos.",
+        "texto": "Porque eres alguien que vale la pena, porque me motivas a ser mejor persona. Te amo. Te amo tanto. Mi niño, felices 5 mesesitos.",
         "imagen": img_def,
         "siguiente": None
     },
+
+    # --- CAMINO PLANIFICAR (FUTURO COMPLETO SIN RECORTES) ---
     54: {
         "personaje": "Daniel",
-        "texto": "Elegiste planificar... (Escribe aquí tus planes)",
+        "texto": "Hmmm futuro, es curioso. No puedo dejar de pensarte en él, sabes.",
+        "imagen": img_def,
+        "siguiente": 55
+    },
+    55: {
+        "personaje": "Daniel",
+        "texto": "Mi futuro ideal es uno donde ya estemos viviendo juntos en Chile, empezaríamos en un departamento pequeño por un tiempo.",
+        "imagen": img_def,
+        "siguiente": 56
+    },
+    56: {
+        "personaje": "Daniel",
+        "texto": "Algo humilde, tendríamos mis ahorros para no preocuparnos por un buen rato pero sería lindo. Tu ya todo trabajador y yo apenas entrando a la carrera. Groomer.",
+        "imagen": img_def,
+        "siguiente": 57
+    },
+    57: {
+        "personaje": "Daniel",
+        "texto": "Podríamos salir seguido, al parque, por sushi, al mall, a donde sea. Quiero ir contigo, quiero conocer la ciudad.",
+        "imagen": img_def,
+        "siguiente": 58
+    },
+    58: {
+        "personaje": "Daniel",
+        "texto": "Quiero ir a la tienda donde dijiste “1800 ah perdón es que estoy mal de la cabeza”. Quiero conocer a tus amigos y familia aunque les caiga mal.",
+        "imagen": img_def,
+        "siguiente": 59
+    },
+    59: {
+        "personaje": "Daniel",
+        "texto": "Luego, cuando tengamos nuestra casa propia, obtengas el trabajo que quieres... ¿Te imaginas ya con empleo? ¿No sería lindo?",
+        "imagen": img_def,
+        "siguiente": 60
+    },
+    60: {
+        "personaje": "Daniel",
+        "texto": "Rezo por que todo salga bien, le pido a todo y a todos por nuestro futuro. Pero creo que rezar no basta.",
+        "imagen": img_def,
+        "siguiente": 61
+    },
+    61: {
+        "personaje": "Daniel",
+        "texto": "Debemos esforzarnos, como pareja, para que todo nos salga bien, no quiero decepcionarte. Solo así podré estar verdaderamente orgulloso de ayudarte a cumplir tus metas.",
+        "imagen": img_def,
+        "siguiente": 62
+    },
+    62: {
+        "personaje": "Daniel",
+        "texto": "Imagina cuando programemos un juego buenísimo. Sé que quiero hacerlo contigo, quiero planearlo.",
+        "imagen": img_def,
+        "siguiente": 63
+    },
+    63: {
+        "personaje": "Daniel",
+        "texto": "Quiero que nuestros personajes sean conocidos, quiero que triunfemos en nuestro futuro. Imagina tu enorme estante de merch de Pinkie Pie.",
+        "imagen": img_def,
+        "siguiente": 64
+    },
+    64: {
+        "personaje": "Daniel",
+        "texto": "Al lado mi colección del manga de JoJos. Nuestras PCs al lado una de la otra para programar y jugar. En nuestra cocina un refri lleno de comida para que cocinemos lo que queramos.",
+        "imagen": img_def,
+        "siguiente": 65
+    },
+    65: {
+        "personaje": "Daniel",
+        "texto": "Un castillo para nuestros gatitos Nirvana y Korn. Y un cuarto para nuestros hijos. Sip ya sabes, nuestros hijos: Kurt y Frances, nuestros amores.",
+        "imagen": img_def,
+        "siguiente": 66
+    },
+    66: {
+        "personaje": "Daniel",
+        "texto": "Ah y nuestros otros hijos: Nirvana 2, Pinkie Pie, Shadow, Apolo, Yorkenson, Nainileven, Nirvana 3,5, Rainbow Dash, Rarity, Starlight, Sunset, Cheese Sandwich, Pelirrojo, Minipam, Minidani...",
+        "imagen": img_def,
+        "siguiente": 67
+    },
+    67: {
+        "personaje": "Daniel",
+        "texto": "...Mpa, Map, Pma, Vox, Charlie Kirk, Mexican Seafood, Anexorcist, Adoptado, Adoptadito, Tusk, Periwinkle, Coca de Dieta, Nuggets, Kira, Akira, Michi, Whiplash, Orion, Blackened...",
+        "imagen": img_def,
+        "siguiente": 68
+    },
+    68: {
+        "personaje": "Daniel",
+        "texto": "...Serv, Makima, Varka, Treintaiun Minutos, Venecolano, Venecalono, IV, Cloe, KKK, Copi-Copi, Elemento, Adjetivo, Mente en Blanco, Chaucha, Yo Soy, Calugoso, Duquesa, Reina...",
+        "imagen": img_def,
+        "siguiente": 69
+    },
+    69: {
+        "personaje": "Daniel",
+        "texto": "...Coliforme, Tepo-Tepo, Yo no Fui, Fierro Malo, Palmerita, Neumatex, Cortachurro, Etcétera, Maletín, Duque, Guasón, Jefe, Moneda, Cucky, Pelusa, Tía, Legui, Reality...",
+        "imagen": img_def,
+        "siguiente": 70
+    },
+    70: {
+        "personaje": "Daniel",
+        "texto": "...Chester, Chu, Ro, Playita, Palmera, Señor, Re Frito, Pescado, Chamuyo, Calendario, James Bond, Rata, Cabeza de Chaya, Neumático, Repetido, Añico, Rucia, Gonzo, Chino, Cortéz, Albertito.",
+        "imagen": img_def,
+        "siguiente": 71
+    },
+    71: {
+        "personaje": "Daniel",
+        "texto": "Bueno, ahora yendo con los que no queremos son... Ok ya paro. No sé, es lindo pensar en procrear contigo. Tener una familia. Tener cualquier cosa contigo.",
+        "imagen": img_def,
+        "siguiente": 72
+    },
+    72: {
+        "personaje": "Daniel",
+        "texto": "Me esforzaré porque todo salga bien, esto es una prueba de ello por ejemplo. Te amo tanto como para dejar el procrastinamiento, te amo tanto como para dar todo de mi.",
+        "imagen": img_def,
+        "siguiente": 73
+    },
+    73: {
+        "personaje": "Daniel",
+        "texto": "Porque al final, mi niño, al final tu mereces lo mejor de lo mejor. Mereces un mejor novio, pero yo quiero ser ese mejor novio.",
+        "imagen": img_def,
+        "siguiente": 74
+    },
+    74: {
+        "personaje": "Daniel",
+        "texto": "Mi wekito, felices 5 meses, te amo. Muak.",
         "imagen": img_def,
         "siguiente": None
     }
-}
 
 # --- 5. LÓGICA DE PANTALLAS ---
 
