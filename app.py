@@ -511,6 +511,7 @@ historia = {
         "imagen": img_def,
         "siguiente": None
     }
+}
 
 # --- 5. LÓGICA DE PANTALLAS ---
 
