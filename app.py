@@ -98,271 +98,304 @@ historia = {
         "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 7
     },
-      6: {
-        "personaje": "Daniel",
-        "texto": "Te amo tanto, gracias por ser tu",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-      6: {
-        "personaje": "Daniel",
-        "texto": "Mi niño",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-      6: {
-        "personaje": "Daniel",
-        "texto": "Te gusta esta novela visual?",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-      6: {
-        "personaje": "Daniel",
-        "texto": "Tiene muchos personajes y eso, soy yo y, yo y también esta yo, y sans deltarune ",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-      6: {
-        "personaje": "Daniel",
-        "texto": "Ah y estas tu creo ",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-      6: {
-        "personaje": "Daniel",
-        "texto": "Bueno, como otras novelas visuales esta tiene opciones de dialogos, viste asi se bueno soy",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-      6: {
-        "personaje": "Daniel",
-        "texto": "Que te parece?",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true", 
-         "opciones": [
-            {"texto": "Menea la chapa remix", "destino": 10},
-            {"texto": "Amarillo amarillo platano", "destino": 20}
-    },
-      6: {
-        "personaje": "Daniel",
-        "texto": "Yo se yo se, increible.",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-      6: {
-        "personaje": "Daniel",
-        "texto": "Oye",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-     6: {
-        "personaje": "Daniel",
-        "texto": "Me gustas",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-     6: {
-        "personaje": "Daniel",
-        "texto": "Me gustas mucho",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-     6: {
-        "personaje": "Daniel",
-        "texto": "Me gustas tanto que quiero esforzarme",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-     6: {
-        "personaje": "Daniel",
-        "texto": "Tanto como para pensar el el pasado de forma bonita ",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-     6: {
-        "personaje": "Daniel",
-        "texto": "O como para esforzarme por un buen futuro",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-     6: {
-        "personaje": "Daniel",
-        "texto": "Mi niño lindo",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
-     6: {
-        "personaje": "Daniel",
-        "texto": "Feliz quinto mes ",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": 7
-    },
     7: {
         "personaje": "Daniel",
-        "texto": "Mi niño... Bueno, ya que me gusta ser mandoneado, me gustaría que respondas una pregunta:",
+        "texto": "Te amo tanto, gracias por ser tu",
         "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 8
     },
     8: {
         "personaje": "Daniel",
-        "texto": "¿Qué quieres hacer?",
+        "texto": "Mi niño",
         "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "opciones": [
-            {"texto": "Recordar", "destino": 10},
-            {"texto": "Planificar", "destino": 20}
-        ]
+        "siguiente": 9
     },
-    # CAMINO RECORDAR
+    9: {
+        "personaje": "Daniel",
+        "texto": "Te gusta esta novela visual?",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 10
+    },
     10: {
         "personaje": "Daniel",
-        "texto": "Hmmmm",
+        "texto": "Tiene muchos personajes y eso, soy yo y, yo y también esta yo, y sans deltarune ",
         "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-     10: {
-        "personaje": "Daniel",
-        "texto": "Sabes, no me gustaba mucho recordar las cosas ",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-     10: {
-        "personaje": "Daniel",
-        "texto": "Nunca de hecho, es como un metodo de defenza para no deprimirme  ",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-     10: {
-        "personaje": "Daniel",
-        "texto": "Solo ",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-     10: {
-        "personaje": "Daniel",
-        "texto": "Cada que pensaba en el pasado ",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-     10: {
-        "personaje": "Daniel",
-        "texto": "Me venian a la mente malos recuerdos ",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-     10: {
-        "personaje": "Daniel",
-        "texto": "Momentos horribles",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-     10: {
-        "personaje": "Daniel",
-        "texto": "Cosas de las que me arrepiento",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-     10: {
-        "personaje": "Daniel",
-        "texto": "Dias que preferiria que no hayan existido ",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-     10: {
-        "personaje": "Daniel",
-        "texto": "Empece a olvidar las cosas como forma de autodefenza, pero",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-     10: {
-        "personaje": "Daniel",
-        "texto": "Ahora hay algo que cambia, estas tu aqui conmigo :3",
-        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
-        "siguiente": None
-    },
-    # --- CAMINO RECORDAR (PASADO) ---
-    10: {
-        "personaje": "Daniel",
-        "texto": "Todo empezó aquel 21 de agosto... Justo andaba escuchando el OST de Undertale hace unos minutos, ¿te acuerdas?",
-        "imagen": "[EMOCIÓN: Nostálgico]",
         "siguiente": 11
     },
     11: {
         "personaje": "Daniel",
-        "texto": "Me preguntaste si se escuchaba como 'Hopes and Dreams'. Ya con las primeras 3 notas supe que era esa. Fue tan simple, pero funcionó para llamar mi atención.",
-        "imagen": "[EMOCIÓN: Alegre]",
+        "texto": "Ah y estas tu creo ",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 12
     },
     12: {
         "personaje": "Daniel",
-        "texto": "Capté la atención del que no sabía que sería el mejor novio del mundo. Me hiciste muy feliz desde ese primer momento.",
-        "imagen": "[EMOCIÓN: Enamorado]",
+        "texto": "Bueno, como otras novelas visuales esta tiene opciones de dialogos, viste asi se bueno soy",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 13
     },
     13: {
         "personaje": "Daniel",
-        "texto": "¿Recuerdas cuando te pregunté si querías ser mi pareja? Sonabas tan decaído y triste por lo que estabas pasando... yo solo quería hacerte feliz.",
-        "imagen": "[EMOCIÓN: Preocupado]",
-        "animacion": "shake", # El shake ayuda a transmitir la intensidad del momento triste
-        "siguiente": 14
+        "texto": "Que te parece?",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true", 
+         "opciones": [
+            {"texto": "Menea la chapa remix", "destino": 14},
+            {"texto": "Amarillo amarillo platano", "destino": 14}
     },
     14: {
         "personaje": "Daniel",
-        "texto": "Quizás a veces no tengo tacto, pero me alegra tanto que desde ese día seamos pareja. Hemos vivido cosas increíbles.",
-        "imagen": "[EMOCIÓN: Sincero]",
+        "texto": "Yo se yo se, increible.",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 15
     },
     15: {
         "personaje": "Daniel",
-        "texto": "Como cuando hicimos a Kris y Ralsei, los dibujos de Caín y Abel, o cuando vimos Hazbin Hotel. ¡Por ti empecé a ver South Park!",
-        "imagen": "[EMOCIÓN: Muy Feliz]",
+        "texto": "Oye",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 16
     },
     16: {
         "personaje": "Daniel",
-        "texto": "Pinkie y Sunset, Tweek y Craig, Charlie y Nick, Denji y Asa... y por supuesto, ¡somos Sonic y Shadow! :3",
-        "imagen": "[EMOCIÓN: Divertido]",
+        "texto": "Me gustas",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 17
     },
     17: {
         "personaje": "Daniel",
-        "texto": "¿Y la tienda? 'Te quiero presentar al oso, es como un hijo para mí'. '¡NOO, TÚ NO IBAS A DECIR ESO!'. Fue tan divertido ese día.",
-        "imagen": "[EMOCIÓN: Riendo]",
+        "texto": "Me gustas mucho",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 18
     },
     18: {
         "personaje": "Daniel",
-        "texto": "Amo pasar tiempo contigo, mi niño. Es tan divertido estar en llamada contigo... pero también hemos tenido momentos difíciles.",
-        "imagen": "[EMOCIÓN: Pensativo]",
+        "texto": "Me gustas tanto que quiero esforzarme",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 19
     },
     19: {
         "personaje": "Daniel",
-        "texto": "Momentos de ganas de llorar por problemas externos o por nosotros mismos. Sé que te he hecho daño y son malos recuerdos...",
-        "imagen": "[EMOCIÓN: Triste]",
-        "animacion": "shake",
+        "texto": "Tanto como para pensar el el pasado de forma bonita ",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 20
     },
     20: {
         "personaje": "Daniel",
-        "texto": "Pero no quiero olvidarlos. No quiero actuar como si no hice nada malo; mereces que aprenda de mis errores y los afronte.",
-        "imagen": "[EMOCIÓN: Serio/Determinado]",
+        "texto": "O como para esforzarme por un buen futuro",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": 21
     },
     21: {
         "personaje": "Daniel",
-        "texto": "Me motivas a ser mejor persona porque vales totalmente la pena. Te amo tanto, mi niño. Felices 5 mesecitos.",
+        "texto": "Mi niño lindo",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 22
+    },
+    22: {
+        "personaje": "Daniel",
+        "texto": "Feliz quinto mes ",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 23
+    },
+    23: {
+        "personaje": "Daniel",
+        "texto": "Mi niño... Bueno, ya que me gusta ser mandoneado, me gustaría que respondas una pregunta:",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 24
+    },
+    24: {
+        "personaje": "Daniel",
+        "texto": "¿Qué quieres hacer?",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "opciones": [
+            {"texto": "Recordar", "destino": 25},
+            {"texto": "Planificar", "destino": 54}
+        ]
+    },
+    # CAMINO RECORDAR
+    25: {
+        "personaje": "Daniel",
+        "texto": "Hmmmm",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 26
+    },
+    26: {
+        "personaje": "Daniel",
+        "texto": "Sabes, no me gustaba mucho recordar las cosas ",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 27
+    },
+    27: {
+        "personaje": "Daniel",
+        "texto": "Nunca de hecho, es como un metodo de defenza para no deprimirme  ",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 28
+    },
+    28: {
+        "personaje": "Daniel",
+        "texto": "Solo ",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 29
+    },
+    29: {
+        "personaje": "Daniel",
+        "texto": "Cada que pensaba en el pasado ",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 30
+    },
+    30: {
+        "personaje": "Daniel",
+        "texto": "Me venian a la mente malos recuerdos ",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 31
+    },
+    31: {
+        "personaje": "Daniel",
+        "texto": "Momentos horribles",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 32
+    },
+    32: {
+        "personaje": "Daniel",
+        "texto": "Cosas de las que me arrepiento",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 33
+    },
+    33: {
+        "personaje": "Daniel",
+        "texto": "Dias que preferiria que no hayan existido ",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 34
+    },
+    34: {
+        "personaje": "Daniel",
+        "texto": "Prefiero evitar los problemas, pero",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 35
+    },
+    35: {
+        "personaje": "Daniel",
+        "texto": "Ahora hay algo que cambia, estas tu aqui conmigo :3",
+        "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
+        "siguiente": 36
+    },
+    36: {
+        "personaje": "Daniel",
+        "texto": "21 de Agosto de 2025... Justo andaba escuchando el OST de Undertale hace unos minutos. ¡Hahaha!",
+        "imagen": "[EMOCIÓN: Nostálgico]",
+        "siguiente": 37
+    },
+    37: {
+        "personaje": "Daniel",
+        "texto": "Jajajaj, ¿sí se escucha como Hopes and Dreams? Aún la sigo practicando. Justo el inicio se me complica un poquito.",
+        "imagen": "[EMOCIÓN: Alegre]",
+        "siguiente": 38
+    },
+    38: {
+        "personaje": "Daniel",
+        "texto": "Para que te hagas una idea, ya con las primeras tres notas supe que era Hopes and Dreams. Fue tan simple, pero de un momento para otro, una ligera forma de querer llamar tu atención funcionó.",
+        "imagen": "[EMOCIÓN: Enamorado]",
+        "siguiente": 39
+    },
+    39: {
+        "personaje": "Daniel",
+        "texto": "Me hizo feliz. Capté la atención del que no sabía que sería el mejor novio del mundo.",
+        "imagen": "[EMOCIÓN: Conmovido]",
+        "siguiente": 40
+    },
+    40: {
+        "personaje": "Daniel",
+        "texto": "¿Recuerdas cómo fue cuando te pregunté si querías ser mi pareja? Sonabas tan decaído en ese momento, tan triste por lo que estabas pasando...",
+        "imagen": "[EMOCIÓN: Preocupado]",
+        "animacion": "shake",
+        "siguiente": 41
+    },
+    41: {
+        "personaje": "Daniel",
+        "texto": "Y yo, ciertamente te quería hacer feliz. Quizás es algo en lo que a veces no tengo tacto, pero me alegro de que desde ese día seamos pareja.",
+        "imagen": "[EMOCIÓN: Sincero]",
+        "siguiente": 42
+    },
+    42: {
+        "personaje": "Daniel",
+        "texto": "Hemos vivido muchos momentos graciosos y bonitos, como la vez que hicimos al Kris y a Ralsei, o dibujos en conjunto como Caín y Abel.",
+        "imagen": "[EMOCIÓN: Muy Feliz]",
+        "siguiente": 43
+    },
+    43: {
+        "personaje": "Daniel",
+        "texto": "Cuando vimos Hazbin Hotel... ¡Por ti empecé a ver South Park, por cierto! Todos los personajes con los que nos identificamos:",
+        "imagen": "[EMOCIÓN: Entusiasmado]",
+        "siguiente": 44
+    },
+    44: {
+        "personaje": "Daniel",
+        "texto": "Somos Ralsei y Kris, Pinkie Pie y Sunset, Tweek y Craig, Charlie y Nick, Charlie y Pim, Charlie y Vaggie, Charlie y Kirk, Trump y Satanás...",
+        "imagen": "[EMOCIÓN: Divertido]",
+        "siguiente": 45
+    },
+    45: {
+        "personaje": "Daniel",
+        "texto": "...Elle y Tao, Johnny y Gyro, Denji y Asa, las torres gemelas y el avión... y por supuesto que somos Sonic y Shadow. :3",
+        "imagen": "[EMOCIÓN: Divertido]",
+        "siguiente": 46
+    },
+    46: {
+        "personaje": "Daniel",
+        "texto": "¿Recuerdas cuando jugamos a tener una tienda? Fue tan divertido ese día. 'Te quiero presentar al oso, el amor de mi... es como un hijo para mí'.",
+        "imagen": "[EMOCIÓN: Riendo]",
+        "siguiente": 47
+    },
+    47: {
+        "personaje": "Daniel",
+        "texto": "'¡NOO, TÚ NO IBAS A DECIR ESO!' '¿POR QUÉ ACTUABAS COMO SI NO ME IBA A DAR CUENTA?'. Amo, amo pasar tiempo contigo. Es tan divertido cuando estamos en llamada.",
+        "imagen": "[EMOCIÓN: Alegre]",
+        "siguiente": 48
+    },
+    48: {
+        "personaje": "Daniel",
+        "texto": "Ciertamente, también hemos tenido malos momentos. Momentos en los que nos sentimos decaídos, con ganas de llorar por problemas adversos o incluso por el otro.",
+        "imagen": "[EMOCIÓN: Triste]",
+        "animacion": "shake",
+        "siguiente": 49
+    },
+    49: {
+        "personaje": "Daniel",
+        "texto": "Son cosas por las que también hemos pasado. Te he hecho daño. Son malos recuerdos, pero no quiero olvidarlos.",
+        "imagen": "[EMOCIÓN: Arrepentido]",
+        "siguiente": 50
+    },
+    50: {
+        "personaje": "Daniel",
+        "texto": "No quiero volver a equivocarme, ni a dañarte. No quiero ser alguien más que te haga daño. No quiero actuar como si nunca hice nada malo, porque no mereces que ignore cosas que sí pasaron.",
+        "imagen": "[EMOCIÓN: Serio]",
+        "siguiente": 51
+    },
+    51: {
+        "personaje": "Daniel",
+        "texto": "Mereces que aprenda de mis equivocaciones, las solucione y las afronte. Porque eres alguien que vale la pena, porque me motivas a ser mejor persona.",
+        "imagen": "[EMOCIÓN: Determinado]",
+        "siguiente": 52
+    },
+    52: {
+        "personaje": "Daniel",
+        "texto": "Te amo. Te amo tanto.",
+        "imagen": "[EMOCIÓN: Enamorado]",
+        "siguiente": 53
+    },
+    53: {
+        "personaje": "Daniel",
+        "texto": "Mi niño, felices 5 mesesitos.",
         "imagen": "[EMOCIÓN: Final Feliz]",
-        "siguiente": None # Aquí aparecerá el botón de "Finalizar ❤️"
+        "siguiente": None
     },
     # CAMINO PLANIFICAR
-    20: {
+    54: {
         "personaje": "Daniel",
         "texto": "Elegiste planificar... (Escribe aquí tus planes)",
         "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": None
     }
 }
-
-# --- 5. LÓGICA DE PANTALLAS ---
 
 # --- 5. LÓGICA DE PANTALLAS ---
 
