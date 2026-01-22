@@ -278,6 +278,81 @@ historia = {
         "imagen": "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Toker.jpeg?raw=true",
         "siguiente": None
     },
+    # --- CAMINO RECORDAR (PASADO) ---
+    10: {
+        "personaje": "Daniel",
+        "texto": "Todo empezó aquel 21 de agosto... Justo andaba escuchando el OST de Undertale hace unos minutos, ¿te acuerdas?",
+        "imagen": "[EMOCIÓN: Nostálgico]",
+        "siguiente": 11
+    },
+    11: {
+        "personaje": "Daniel",
+        "texto": "Me preguntaste si se escuchaba como 'Hopes and Dreams'. Ya con las primeras 3 notas supe que era esa. Fue tan simple, pero funcionó para llamar mi atención.",
+        "imagen": "[EMOCIÓN: Alegre]",
+        "siguiente": 12
+    },
+    12: {
+        "personaje": "Daniel",
+        "texto": "Capté la atención del que no sabía que sería el mejor novio del mundo. Me hiciste muy feliz desde ese primer momento.",
+        "imagen": "[EMOCIÓN: Enamorado]",
+        "siguiente": 13
+    },
+    13: {
+        "personaje": "Daniel",
+        "texto": "¿Recuerdas cuando te pregunté si querías ser mi pareja? Sonabas tan decaído y triste por lo que estabas pasando... yo solo quería hacerte feliz.",
+        "imagen": "[EMOCIÓN: Preocupado]",
+        "animacion": "shake", # El shake ayuda a transmitir la intensidad del momento triste
+        "siguiente": 14
+    },
+    14: {
+        "personaje": "Daniel",
+        "texto": "Quizás a veces no tengo tacto, pero me alegra tanto que desde ese día seamos pareja. Hemos vivido cosas increíbles.",
+        "imagen": "[EMOCIÓN: Sincero]",
+        "siguiente": 15
+    },
+    15: {
+        "personaje": "Daniel",
+        "texto": "Como cuando hicimos a Kris y Ralsei, los dibujos de Caín y Abel, o cuando vimos Hazbin Hotel. ¡Por ti empecé a ver South Park!",
+        "imagen": "[EMOCIÓN: Muy Feliz]",
+        "siguiente": 16
+    },
+    16: {
+        "personaje": "Daniel",
+        "texto": "Pinkie y Sunset, Tweek y Craig, Charlie y Nick, Denji y Asa... y por supuesto, ¡somos Sonic y Shadow! :3",
+        "imagen": "[EMOCIÓN: Divertido]",
+        "siguiente": 17
+    },
+    17: {
+        "personaje": "Daniel",
+        "texto": "¿Y la tienda? 'Te quiero presentar al oso, es como un hijo para mí'. '¡NOO, TÚ NO IBAS A DECIR ESO!'. Fue tan divertido ese día.",
+        "imagen": "[EMOCIÓN: Riendo]",
+        "siguiente": 18
+    },
+    18: {
+        "personaje": "Daniel",
+        "texto": "Amo pasar tiempo contigo, mi niño. Es tan divertido estar en llamada contigo... pero también hemos tenido momentos difíciles.",
+        "imagen": "[EMOCIÓN: Pensativo]",
+        "siguiente": 19
+    },
+    19: {
+        "personaje": "Daniel",
+        "texto": "Momentos de ganas de llorar por problemas externos o por nosotros mismos. Sé que te he hecho daño y son malos recuerdos...",
+        "imagen": "[EMOCIÓN: Triste]",
+        "animacion": "shake",
+        "siguiente": 20
+    },
+    20: {
+        "personaje": "Daniel",
+        "texto": "Pero no quiero olvidarlos. No quiero actuar como si no hice nada malo; mereces que aprenda de mis errores y los afronte.",
+        "imagen": "[EMOCIÓN: Serio/Determinado]",
+        "siguiente": 21
+    },
+    21: {
+        "personaje": "Daniel",
+        "texto": "Me motivas a ser mejor persona porque vales totalmente la pena. Te amo tanto, mi niño. Felices 5 mesecitos.",
+        "imagen": "[EMOCIÓN: Final Feliz]",
+        "siguiente": None # Aquí aparecerá el botón de "Finalizar ❤️"
+    },
     # CAMINO PLANIFICAR
     20: {
         "personaje": "Daniel",
