@@ -59,7 +59,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Mi niño bonito, hoy cumplimos un mes más de relación y ahora que es parte de otro año quiero que sea más especial.",
         "imagen": img_def,
-        "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/el%20profe.mp3",
+        "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/31%20minutos%20-%20Karaoke%20-%20Yo%20opino.mp3",
         "siguiente": 1
     },
     1: {
@@ -139,6 +139,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Que te parece?",
         "imagen": img_def, 
+        "musica": "ninguna"
          "opciones": [
             {"texto": "Menea la chapa remix", "destino": 14},
             {"texto": "Amarillo amarillo platano", "destino": 14}
@@ -217,6 +218,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Hmmmm",
         "imagen": img_def,
+        "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/el%20profe.mp3",
         "siguiente": 26
     },
     26: {
