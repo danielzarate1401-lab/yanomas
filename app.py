@@ -614,7 +614,9 @@ if st.session_state.jugando:
             else:
                 st.session_state.jugando = False
                 st.rerun()
-  st.markdown('</div>', unsafe_allow_html=True) # Este cierra el contenedor-botones
+    
+    # ESTA ES LA LÍNEA QUE TENÍA EL ERROR (Ya está alineada)
+    st.markdown('</div>', unsafe_allow_html=True) 
 
     # --- LÓGICA DE AUDIO ---
     if "musica" in escena:
