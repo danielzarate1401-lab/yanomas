@@ -44,21 +44,25 @@ st.markdown("""
 
     /* 3. FONDO DE LA PANTALLITA PEQUEÑA */
     .pantalla-juego {
-        background-color: #333;
-        /* Aquí va la imagen de la escena del juego */
-        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
-        background-size: cover;
-        background-position: center;
-        height: 220px;
-        border: 4px solid #333;
-        border-bottom: none;
-        border-radius: 10px 10px 0 0;
-        display: flex;
-        justify-content: flex-start; 
-        align-items: flex-end;
-        position: relative;
-        overflow: hidden;
-        padding-left: 15px;
+    background-color: #000; /* relleno detrás */
+    background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg');
+    background-size: contain;   /* 👈 CLAVE */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 220px;
+    border: 4px solid #333;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    padding-left: 15px;
+}
+
     }
 
     .personaje-img {
