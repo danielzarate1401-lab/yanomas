@@ -4,6 +4,7 @@ st.set_page_config(page_title="Felices 5 meses", layout="wide")
 
 
 # ___ CSS ___ #
+
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
@@ -21,19 +22,16 @@ st.markdown("""
         max-width: 100% !important;
     }
 
-    /* 1. FONDO GENERAL DE LA APLICACIÓN (EL SALÓN) */
     .stApp { 
-        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/salonxddd.jpg');
-        background-size: cover;
-        background-position: center;
+        /* === AQUÍ CAMBIAS EL FONDO DE LA APP === */
+        background: linear-gradient(135deg, #e57399 0%, #f48fb1 50%, #ad1457 100%);
         background-attachment: fixed;
     }
 
-    /* 2. EL MARCO ROSA DE LA CONSOLA */
     .marco-consola {
         position: relative;
         z-index: 1000000 !important;
-        background-color: #f06292; /* Este es el color rosa del borde */
+        background-color: #f06292;
         border: 10px solid #ad1457;
         border-radius: 20px;
         padding: 15px;
@@ -42,27 +40,22 @@ st.markdown("""
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
     }
 
-    /* 3. FONDO DE LA PANTALLITA PEQUEÑA */
     .pantalla-juego {
-    background-color: #000; /* relleno detrás */
-    background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg');
-    background-size: contain;   /* 👈 CLAVE */
-    background-repeat: no-repeat;
-    background-position: center;
-
-    height: 220px;
-    border: 4px solid #333;
-    border-bottom: none;
-    border-radius: 10px 10px 0 0;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    position: relative;
-    overflow: hidden;
-    padding-left: 15px;
-}
-
+        background-color: #333;
+        /* === AQUÍ CAMBIAS EL FONDO DE LA PANTALLA (DETRÁS DEL PERSONAJE) === */
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
+        background-size: cover;
+        background-position: center;
+        height: 220px;
+        border: 4px solid #333;
+        border-bottom: none;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: flex-start; 
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding-left: 15px;
     }
 
     .personaje-img {
