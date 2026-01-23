@@ -1,52 +1,45 @@
 import streamlit as st
 
-# --- 1. CONFIGURACIÓN ---
-# Esta debe ser la PRIMERA función de streamlit que se ejecute
 st.set_page_config(page_title="Felices 5 meses", layout="wide")
 
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
 
-    /* 1. OCULTAR TODO LO QUE NO SEA NUESTRA CONSOLA */
     audio { display: none !important; }
     
-    /* Matamos el header, la decoración y cualquier barra de Streamlit */
     [data-testid="stHeader"], [data-testid="stDecoration"], footer, header {
         display: none !important;
         height: 0px !important;
         opacity: 0 !important;
     }
 
-    /* Quitamos el espacio en blanco de arriba */
     .block-container {
         padding-top: 0rem !important;
         max-width: 100% !important;
     }
 
-    /* 2. DISEÑO DE LA APP */
     .stApp { 
+        /* === AQUÍ CAMBIAS EL FONDO DE LA APP === */
         background: linear-gradient(135deg, #e57399 0%, #f48fb1 50%, #ad1457 100%);
         background-attachment: fixed;
     }
 
-    /* EL CAMBIO CLAVE: Subimos la consola con margen negativo para que tape el hueco */
     .marco-consola {
         position: relative;
-        z-index: 1000000 !important; /* Prioridad máxima */
+        z-index: 1000000 !important;
         background-color: #f06292;
         border: 10px solid #ad1457;
         border-radius: 20px;
         padding: 15px;
         width: 380px; 
-        margin: -40px auto 0 auto; /* Este -40px sube la consola hasta arriba */
+        margin: -40px auto 0 auto; 
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
     }
 
-    /* ... mantén tus clases de pantalla-juego, personaje-img, etc. igual ... */
-    
     .pantalla-juego {
         background-color: #333;
+        /* === AQUÍ CAMBIAS EL FONDO DE LA PANTALLA (DETRÁS DEL PERSONAJE) === */
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
         background-size: cover;
         background-position: center;
@@ -92,7 +85,7 @@ st.markdown("""
         align-items: center;
         width: 100%;
         position: relative;
-        z-index: 1000001; /* Botones también por encima */
+        z-index: 1000001;
     }
 
     .stButton>button {
