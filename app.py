@@ -9,39 +9,47 @@ st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
 
-    /* 1. ELIMINACIÓN DE ELEMENTOS FANTASMA */
-    audio { display: none !important; }
-    
-    [data-testid="stHeader"], [data-testid="stDecoration"], #MainMenu, footer, header {
-        visibility: hidden !important;
+    /* 1. PARCHE DE CAMUFLAJE (OCULTA EL BOTÓN FEO) */
+    .stApp::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px; /* Ajusta este alto si el botón sigue asomándose */
+        background: #e57399; /* El color exacto de tu fondo superior */
+        z-index: 999998; /* Justo debajo de la consola, pero encima de todo lo demás */
+    }
+
+    /* 2. LIMPIEZA DE BARRAS */
+    [data-testid="stHeader"], [data-testid="stDecoration"] {
         display: none !important;
     }
 
     .block-container {
         padding-top: 0rem !important;
-        margin-top: -30px !important;
     }
 
-    [data-testid="stVerticalBlock"] > div:empty {
-        display: none !important;
-    }
-
-    /* 2. DISEÑO DE LA CONSOLA */
+    /* 3. DISEÑO DE LA APP */
     .stApp { 
         background: linear-gradient(135deg, #e57399 0%, #f48fb1 50%, #ad1457 100%);
         background-attachment: fixed;
     }
 
     .marco-consola {
+        position: relative;
+        z-index: 999999; /* La consola queda arriba de todo */
         background-color: #f06292;
         border: 10px solid #ad1457;
         border-radius: 20px;
         padding: 15px;
         width: 380px; 
-        margin: 0 auto;
+        margin: 20px auto 0 auto; /* Bajamos un poco la consola para que respire */
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
     }
 
+    /* ... mantén el resto de tu CSS (pantalla-juego, personaje-img, etc.) igual ... */
+    
     .pantalla-juego {
         background-color: #333;
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
@@ -102,7 +110,6 @@ st.markdown("""
     }
     </style>
     """, unsafe_allow_html=True)
-
 # --- 3. INICIALIZACIÓN DE ESTADOS ---
 if 'paso' not in st.session_state:
     st.session_state.paso = 0
