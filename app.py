@@ -83,6 +83,20 @@ st.markdown("""
         height: 45px;
         box-shadow: 0px 5px 0px #78002e;
     }
+    /* Ocultar bloques vacíos de Streamlit y el botón fantasma */
+    [data-testid="stVerticalBlock"] > div:empty {
+        display: none !important;
+    }
+    
+    /* Eliminar el espacio extra que Streamlit pone arriba por defecto */
+    .block-container {
+        padding-top: 2rem !important;
+    }
+
+    /* Ocultar el menú superior y el footer para que se vea más limpio */
+    #MainMenu, footer, header {
+        visibility: hidden;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -562,12 +576,11 @@ historia = {
 
 # --- 5. LÓGICA DE PANTALLAS ---
 if st.session_state.jugando:
+    # Obtenemos la escena
     escena = historia.get(st.session_state.paso, historia[0])
     
-    # Abrimos el marco de la consola
+    # 1. El Marco Rosa (Consola)
     st.markdown('<div class="marco-consola">', unsafe_allow_html=True)
-    
-    # Pantalla y Diálogo unificados
     st.markdown(f'''
         <div class="pantalla-juego">
             <img src="{escena["imagen"]}" class="personaje-img">
@@ -577,46 +590,41 @@ if st.session_state.jugando:
             <div style="font-size: 16px; line-height: 1.3;">{escena["texto"]}</div>
         </div>
     ''', unsafe_allow_html=True)
-    
-    # Cerramos el marco de la consola
     st.markdown('</div>', unsafe_allow_html=True) 
 
-    # Contenedor de botones (fuera del marco)
+    # 2. Los Botones (Controladores)
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
-    
     if "opciones" in escena:
         for opcion in escena["opciones"]:
-            if st.button(opcion["texto"]):
+            if st.button(opcion["texto"], key=f"btn_{opcion['destino']}"):
                 st.session_state.paso = opcion["destino"]
                 st.rerun()
     else:
-        if st.button("CONTINUAR"):
+        # Usamos una 'key' única para evitar que Streamlit se confunda
+        if st.button("CONTINUAR", key="btn_next"):
             if escena["siguiente"] is not None:
                 st.session_state.paso = escena["siguiente"]
                 st.rerun()
             else:
                 st.session_state.jugando = False
                 st.rerun()
-    
     st.markdown('</div>', unsafe_allow_html=True) 
 
-    # Lógica de Audio
+    # 3. Audio (Oculto)
     if "musica" in escena:
         if escena["musica"] != st.session_state.musica_actual:
             st.session_state.musica_actual = escena["musica"]
-
     if st.session_state.musica_actual and st.session_state.musica_actual != "ninguna":
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
 
 else:
-    # Pantalla de inicio
-    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 380px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
-    st.markdown('<h1 style="color:white; font-family:Montserrat; font-size: 35px;">💖</h1>', unsafe_allow_html=True)
-    st.markdown('<h2 style="color:white; font-family:Montserrat;">NUESTRA HISTORIA</h2>', unsafe_allow_html=True)
+    # PANTALLA DE INICIO SIN BOTONES FANTASMA
+    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 300px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
+    st.markdown('<h1 style="color:white; font-family:Montserrat; font-size: 28px;">💖 NUESTRA HISTORIA</h1>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
-    if st.button("ENCENDER CONSOLA"):
+    if st.button("ENCENDER CONSOLA", key="btn_start"):
         st.session_state.jugando = True
         st.session_state.paso = 0
         st.rerun()
