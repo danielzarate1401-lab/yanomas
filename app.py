@@ -2,6 +2,8 @@ import streamlit as st
 
 st.set_page_config(page_title="Felices 5 meses", layout="wide")
 
+
+# ___ CSS ___ #
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
