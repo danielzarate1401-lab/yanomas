@@ -391,6 +391,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Hmmm futuro, es curioso. No puedo dejar de pensarte en él, sabes.",
         "imagen": img_def,
+        "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Weezer%20-%20Island%20In%20The%20Sun%20(Instrumental%20Original).mp3",
         "siguiente": 55
     },
     55: {
