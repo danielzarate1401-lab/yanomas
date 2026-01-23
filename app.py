@@ -564,30 +564,26 @@ historia = {
 if st.session_state.jugando:
     escena = historia.get(st.session_state.paso, historia[0])
     
-    # MARCO CENTRADO
+    # Abrimos el marco de la consola
     st.markdown('<div class="marco-consola">', unsafe_allow_html=True)
     
-   if st.session_state.jugando:
-    escena = historia.get(st.session_state.paso, historia[0])
-    
-    # IMPORTANTE: Que no haya nada entre el 'if' y este markdown
-    st.markdown('<div class="marco-consola">', unsafe_allow_html=True)
-    
+    # Pantalla y Diálogo unificados
     st.markdown(f'''
         <div class="pantalla-juego">
             <img src="{escena["imagen"]}" class="personaje-img">
         </div>
         <div class="dialogo-box">
             <div class="nombre-personaje">{escena["personaje"]}</div>
-            <div style="font-size: 16px;">{escena["texto"]}</div>
+            <div style="font-size: 16px; line-height: 1.3;">{escena["texto"]}</div>
         </div>
     ''', unsafe_allow_html=True)
     
-    st.markdown('</div>', unsafe_allow_html=True) # Cierra el marco rosa
-    st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
+    # Cerramos el marco de la consola
+    st.markdown('</div>', unsafe_allow_html=True) 
 
-    # BOTONES CENTRADOS
+    # Contenedor de botones (fuera del marco)
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
+    
     if "opciones" in escena:
         for opcion in escena["opciones"]:
             if st.button(opcion["texto"]):
@@ -602,10 +598,9 @@ if st.session_state.jugando:
                 st.session_state.jugando = False
                 st.rerun()
     
-    # ESTA ES LA LÍNEA QUE TENÍA EL ERROR (Ya está alineada)
     st.markdown('</div>', unsafe_allow_html=True) 
 
-    # --- LÓGICA DE AUDIO ---
+    # Lógica de Audio
     if "musica" in escena:
         if escena["musica"] != st.session_state.musica_actual:
             st.session_state.musica_actual = escena["musica"]
@@ -615,7 +610,7 @@ if st.session_state.jugando:
 
 else:
     # Pantalla de inicio
-    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 400px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
+    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 380px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
     st.markdown('<h1 style="color:white; font-family:Montserrat; font-size: 35px;">💖</h1>', unsafe_allow_html=True)
     st.markdown('<h2 style="color:white; font-family:Montserrat;">NUESTRA HISTORIA</h2>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
