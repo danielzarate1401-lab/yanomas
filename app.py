@@ -6,42 +6,49 @@ st.set_page_config(page_title="Felices 5 meses", layout="wide")
 # --- 2. ESTILOS CSS ---
 st.markdown("""
     <style>
-    .stApp { background: linear-gradient(to bottom, #ffdde1, #ee9ca7); }
-   .dialogo-box {
-        background-color: rgba(255, 255, 255, 0.85);
-        border: 3px solid #f06292;
-        border-radius: 15px;
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    
+    .stApp { background: #000000; }
+
+    .dialogo-box {
+        background-color: #000000; 
+        border: 4px solid #ffffff; 
+        border-radius: 0px;       
         padding: 25px;
         margin-top: 20px;
-        color: #333;
-        font-family: 'Verdana', sans-serif;
-        font-size: 18px;
-        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-        min-height: 200px;  /* Altura mínima para que no se encoja */
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        color: #ffffff;            /* Texto blanco */
+        font-family: 'Press Start 2P', cursive; /* Fuente pixel */
+        font-size: 16px;           /* Las fuentes pixel se ven mejor pequeñas */
+        line-height: 1.6;
+        
+        /* Altura fija para que los botones no bailen */
+        min-height: 220px;
+        box-shadow: inset 0 0 10px #000000;
     }
-    .nombre-personaje { font-weight: bold; color: #d81b60; font-size: 22px; margin-bottom: 8px; }
-    
-    @keyframes shake {
-      0% { transform: translate(1px, 1px) rotate(0deg); }
-      10% { transform: translate(-1px, -2px) rotate(-1deg); }
-      30% { transform: translate(3px, 2px) rotate(0deg); }
-      50% { transform: translate(-1px, 2px) rotate(-1deg); }
-      100% { transform: translate(1px, -2px) rotate(-1deg); }
+
+    .nombre-personaje { 
+        font-weight: bold; 
+        color: #ffff00; /* Amarillo para el nombre, estilo interactivo */
+        font-size: 18px; 
+        margin-bottom: 15px;
+        text-transform: uppercase;
     }
-    .personaje-shake { animation: shake 0.5s infinite; }
-    
+
+    /* Botones estilo retro */
     .stButton>button {
-        border-radius: 20px;
-        border: 2px solid #f06292;
-        transition: 0.3s;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 12px;
+        border: 2px solid #ffffff;
+        border-radius: 0px;
+        padding: 10px;
+        transition: 0.2s;
     }
     .stButton>button:hover {
-        background-color: #f06292;
-        color: white;
-        transform: scale(1.05);
+        background-color: #ffffff;
+        color: #000000;
+        border: 2px solid #ffff00;
     }
     </style>
     """, unsafe_allow_html=True)
