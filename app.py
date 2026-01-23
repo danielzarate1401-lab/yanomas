@@ -39,8 +39,7 @@ st.markdown("""
 
     .pantalla-juego {
         background-color: #333;
-        /* === AQUÍ CAMBIAS EL FONDO DE LA PANTALLA (DETRÁS DEL PERSONAJE) === */
-        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/salonxddd.jpg'); 
         background-size: cover;
         background-position: center;
         height: 220px;
