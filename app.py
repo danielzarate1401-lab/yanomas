@@ -614,17 +614,18 @@ if st.session_state.jugando:
             else:
                 st.session_state.jugando = False
                 st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
+  st.markdown('</div>', unsafe_allow_html=True) # Este cierra el contenedor-botones
 
-    # Audio
+    # --- LÓGICA DE AUDIO ---
     if "musica" in escena:
         if escena["musica"] != st.session_state.musica_actual:
             st.session_state.musica_actual = escena["musica"]
+
     if st.session_state.musica_actual and st.session_state.musica_actual != "ninguna":
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
 
 else:
-    # PANTALLA DE INICIO (Mismo ancho y botones)
+    # Pantalla de inicio
     st.markdown('<div class="marco-consola" style="text-align:center; min-height: 400px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
     st.markdown('<h1 style="color:white; font-family:Montserrat; font-size: 35px;">💖</h1>', unsafe_allow_html=True)
     st.markdown('<h2 style="color:white; font-family:Montserrat;">NUESTRA HISTORIA</h2>', unsafe_allow_html=True)
@@ -635,4 +636,4 @@ else:
         st.session_state.jugando = True
         st.session_state.paso = 0
         st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
