@@ -21,6 +21,7 @@ st.markdown("""
         max-width: 100% !important;
     }
 
+    /* 1. FONDO GENERAL DE LA APLICACIÓN (EL SALÓN) */
     .stApp { 
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/salonxddd.jpg');
         background-size: cover;
@@ -28,10 +29,11 @@ st.markdown("""
         background-attachment: fixed;
     }
 
+    /* 2. EL MARCO ROSA DE LA CONSOLA */
     .marco-consola {
         position: relative;
         z-index: 1000000 !important;
-        background-color: #f06292;
+        background-color: #f06292; /* Este es el color rosa del borde */
         border: 10px solid #ad1457;
         border-radius: 20px;
         padding: 15px;
@@ -40,8 +42,10 @@ st.markdown("""
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
     }
 
+    /* 3. FONDO DE LA PANTALLITA PEQUEÑA */
     .pantalla-juego {
         background-color: #333;
+        /* Aquí va la imagen de la escena del juego */
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
         background-size: cover;
         background-position: center;
