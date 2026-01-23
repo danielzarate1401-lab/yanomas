@@ -7,7 +7,7 @@ st.set_page_config(page_title="Felices 5 meses", layout="wide")
 st.markdown("""
     <style>
     .stApp { background: linear-gradient(to bottom, #ffdde1, #ee9ca7); }
-    .dialogo-box {
+   .dialogo-box {
         background-color: rgba(255, 255, 255, 0.85);
         border: 3px solid #f06292;
         border-radius: 15px;
@@ -17,6 +17,10 @@ st.markdown("""
         font-family: 'Verdana', sans-serif;
         font-size: 18px;
         box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        min-height: 200px;  /* Altura mínima para que no se encoja */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     .nombre-personaje { font-weight: bold; color: #d81b60; font-size: 22px; margin-bottom: 8px; }
     
