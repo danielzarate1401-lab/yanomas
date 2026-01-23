@@ -6,49 +6,52 @@ st.set_page_config(page_title="Felices 5 meses", layout="wide")
 # --- 2. ESTILOS CSS ---
 st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-    
-    .stApp { background: #000000; }
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+    .stApp { background: linear-gradient(to bottom, #ffdde1, #ee9ca7); }
 
     .dialogo-box {
-        background-color: #000000; 
-        border: 4px solid #ffffff; 
-        border-radius: 0px;       
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 3px solid #f06292;
+        border-radius: 20px;
         padding: 25px;
         margin-top: 20px;
-        color: #ffffff;            /* Texto blanco */
-        font-family: 'Press Start 2P', cursive; /* Fuente pixel */
-        font-size: 16px;           /* Las fuentes pixel se ven mejor pequeñas */
-        line-height: 1.6;
+        color: #444;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 19px;
+        box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
         
-        /* Altura fija para que los botones no bailen */
-        min-height: 220px;
-        box-shadow: inset 0 0 10px #000000;
+        /* FIJAMOS LA ALTURA AQUÍ */
+        min-height: 220px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .nombre-personaje { 
-        font-weight: bold; 
-        color: #ffff00; /* Amarillo para el nombre, estilo interactivo */
-        font-size: 18px; 
-        margin-bottom: 15px;
-        text-transform: uppercase;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700; 
+        color: #d81b60; 
+        font-size: 24px; 
+        margin-bottom: 10px; 
     }
 
-    /* Botones estilo retro */
+    /* Botones más bonitos y consistentes */
     .stButton>button {
-        background-color: #000000;
-        color: #ffffff;
-        font-family: 'Press Start 2P', cursive;
-        font-size: 12px;
-        border: 2px solid #ffffff;
-        border-radius: 0px;
-        padding: 10px;
-        transition: 0.2s;
+        border-radius: 15px;
+        border: 2px solid #f06292;
+        background-color: white;
+        color: #f06292;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        transition: 0.3s;
+        height: 50px; /* Altura fija para botones */
     }
     .stButton>button:hover {
-        background-color: #ffffff;
-        color: #000000;
-        border: 2px solid #ffff00;
+        background-color: #f06292;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0px 4px 10px rgba(240, 98, 146, 0.3);
     }
     </style>
     """, unsafe_allow_html=True)
