@@ -3,76 +3,81 @@ import streamlit as st
 # --- 1. CONFIGURACIÓN ---
 st.set_page_config(page_title="Felices 5 meses", layout="wide")
 
-# --- 2. ESTILOS CSS (MAXIMALISTA ROSA) ---
+# --- 2. ESTILOS CSS (ESTILO CONSOLA PORTÁTIL) ---
 st.markdown("""
     <style>
-    audio {
-        display: none;
-    }
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
 
+    audio { display: none !important; }
+
+    /* El espacio sobrante - Rosado Metálico */
     .stApp { 
-        background: radial-gradient(circle, #ffdde1 0%, #ee9ca7 50%, #ffafbd 100%);
-        background-attachment: fixed;
+        background-color: #f48fb1;
+        background-image: linear-gradient(135deg, #f48fb1 0%, #ec407a 100%);
     }
 
-    .dialogo-box {
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        border: 4px solid #f06292;
-        outline: 4px solid #ff1744;
-        outline-offset: -8px;
-        border-radius: 30px;
-        padding: 30px;
-        margin: 20px auto;
-        color: #d81b60;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        box-shadow: 0px 15px 35px rgba(240, 98, 146, 0.4);
-        min-height: 240px; 
+    /* El cuerpo de la consola */
+    .consola-container {
+        background: #f06292; /* Rosado base de la consola */
+        border: 8px solid #ad1457; /* Marco del color de los botones */
+        border-radius: 40px;
+        padding: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+        box-shadow: inset -5px -5px 0px #c2185b, 10px 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* La pantalla (Fondo + Personaje) */
+    .pantalla-juego {
+        background-color: #222; /* Fondo de la pantalla */
+        background-image: url('TU_URL_DE_FONDO_AQUI'); /* Pon aquí el link de tu fondo */
+        background-size: cover;
+        background-position: center;
+        border: 10px solid #333;
+        border-radius: 10px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
     }
 
-    .nombre-personaje { 
+    /* El personaje dentro de la pantalla */
+    .personaje-overlay {
+        height: 90%;
+        filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.3));
+    }
+
+    /* Caja de diálogos debajo */
+    .dialogo-box {
+        background: #fff;
+        border: 4px solid #ad1457;
+        border-radius: 15px;
+        padding: 15px;
+        margin-top: 15px;
+        color: #333;
+        font-family: 'Quicksand', sans-serif;
+        min-height: 150px;
+    }
+
+    .nombre-personaje {
         font-family: 'Montserrat', sans-serif;
-        font-weight: 800; 
-        color: #ad1457; 
-        font-size: 28px; 
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-        text-shadow: 2px 2px #ff80ab;
+        color: #ad1457;
+        font-size: 20px;
+        margin-bottom: 5px;
     }
 
+    /* Botones de la consola */
     .stButton>button {
-        background: linear-gradient(45deg, #ff4081, #f06292);
+        background: #ad1457;
         color: white !important;
-        border: 3px solid #f8bbd0;
         border-radius: 50px;
+        border: none;
         font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
         font-size: 14px;
-        height: 55px;
-        letter-spacing: 1px;
-        box-shadow: 0px 5px 0px #c2185b;
-        transition: 0.1s all;
-        margin-bottom: 10px;
-        width: 100%;
-    }
-
-    .stButton>button:hover {
-        transform: translateY(2px);
-        box-shadow: 0px 2px 0px #c2185b;
-        background: linear-gradient(45deg, #f06292, #ff4081);
-        border-color: white;
-    }
-
-    .personaje-img {
-        border: 6px solid white;
-        box-shadow: 10px 10px 0px #f06292, 20px 20px 0px #f8bbd0;
-        border-radius: 20px;
+        height: 45px;
+        box-shadow: 0px 4px 0px #78002e;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -551,66 +556,55 @@ historia = {
     }
 }
 
-# --- 5. LÓGICA DE PANTALLAS ---
+# ... después del diccionario historia y los estilos CSS ...
 
-if not st.session_state.jugando:
-    st.snow()
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        st.write("")
-        st.write("")
-        st.image(img_def, use_container_width=True)
-        st.markdown("<h1 style='text-align: center; color: #d81b60; font-family: cursive;'>Nuestra Historia ❤️</h1>", unsafe_allow_html=True)
-        st.markdown("<p style='text-align: center;'>Un regalo especial para mi niño</p>", unsafe_allow_html=True)
-        if st.button("✨ COMENZAR ✨", use_container_width=True):
-            st.session_state.jugando = True
-            st.rerun()
-else:
+# --- 5. LÓGICA DE PANTALLAS ---
+if st.session_state.jugando:
+    # Obtenemos la escena actual
     escena = historia.get(st.session_state.paso, historia[0])
     
+    # --- AQUÍ VA EL HTML DE LA CONSOLA ---
+    st.markdown('<div class="consola-container">', unsafe_allow_html=True)
+    
+    # 1. La Pantalla (con el personaje dentro)
+    st.markdown(f'''
+        <div class="pantalla-juego">
+            <img src="{escena["imagen"]}" class="personaje-overlay">
+        </div>
+    ''', unsafe_allow_html=True)
+    
+    # 2. La Caja de Diálogo
+    st.markdown(f'''
+        <div class="dialogo-box">
+            <div class="nombre-personaje">{escena["personaje"]}</div>
+            <div style="font-size: 18px;">{escena["texto"]}</div>
+        </div>
+    ''', unsafe_allow_html=True)
+    
+    # 3. Los Botones (Controladores de la consola)
+    st.write("") # Un pequeño espacio
+    
+    if "opciones" in escena:
+        for opcion in escena["opciones"]:
+            if st.button(opcion["texto"]):
+                st.session_state.paso = opcion["destino"]
+                st.rerun()
+    else:
+        # Botón único para avanzar
+        if st.button("CONTINUAR A"): # Puedes ponerle 'A' como los botones de consola
+            if escena["siguiente"] is not None:
+                st.session_state.paso = escena["siguiente"]
+                st.rerun()
+            else:
+                st.session_state.jugando = False
+                st.rerun()
+                
+    st.markdown('</div>', unsafe_allow_html=True) # Cierre del contenedor de la consola
+
+    # --- LÓGICA DE AUDIO (OCULTA) ---
     if "musica" in escena:
-        st.session_state.musica_actual = escena["musica"]
+        if escena["musica"] != st.session_state.musica_actual:
+            st.session_state.musica_actual = escena["musica"]
 
     if st.session_state.musica_actual and st.session_state.musica_actual != "ninguna":
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
-    
-    if not st.session_state.musica_actual:
-        st.write("🎵 *Silencio*")
-
-    c1, c2, c3 = st.columns([1, 2, 1])
-    with c2:
-        clase_anim = "personaje-shake" if escena.get("animacion") == "shake" else ""
-        st.markdown(f'''
-            <img src="{escena["imagen"]}" 
-                 class="{clase_anim}" 
-                 style="width:100%; border-radius:20px; border: 5px solid white;">
-        ''', unsafe_allow_html=True)
-        
-        st.markdown(f"""
-            <div class="dialogo-box">
-                <div class="nombre-personaje">{escena['personaje']}</div>
-                {escena['texto']}
-            </div>
-        """, unsafe_allow_html=True)
-
-        st.write("") 
-
-        if "opciones" in escena:
-            cols_btn = st.columns(len(escena["opciones"]))
-            for i, opt in enumerate(escena["opciones"]):
-                if cols_btn[i].button(opt["texto"], key=f"btn_opt_{i}_{st.session_state.paso}", use_container_width=True):
-                    st.session_state.paso = opt["destino"]
-                    st.rerun()
-        else:
-            sig = escena.get("siguiente")
-            if sig is not None:
-                if st.button("Continuar ➔", key=f"btn_next_{st.session_state.paso}", use_container_width=True):
-                    st.session_state.paso = sig
-                    st.rerun()
-            else:
-                if st.button("Finalizar ❤️", key="btn_final", use_container_width=True):
-                    st.balloons()
-                    st.session_state.paso = 0
-                    st.session_state.jugando = False
-                    st.session_state.musica_actual = "ninguna"
-                    st.rerun()
