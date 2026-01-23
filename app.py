@@ -46,7 +46,7 @@ st.markdown("""
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
         background-size: cover;
         background-position: center;
-        height: 400px;
+        height: 500px;
         border: 4px solid #333;
         border-bottom: none;
         border-radius: 10px 10px 0 0;
