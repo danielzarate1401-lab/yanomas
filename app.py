@@ -3,55 +3,73 @@ import streamlit as st
 # --- 1. CONFIGURACIÓN ---
 st.set_page_config(page_title="Felices 5 meses", layout="wide")
 
-# --- 2. ESTILOS CSS ---
+# --- 2. ESTILOS CSS (MAXIMALISTA ROSA) ---
 st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
 
-    .stApp { background: linear-gradient(to bottom, #ffdde1, #ee9ca7); }
+    .stApp { 
+        background: radial-gradient(circle, #ffdde1 0%, #ee9ca7 50%, #ffafbd 100%);
+        background-attachment: fixed;
+    }
 
     .dialogo-box {
-        background-color: rgba(255, 255, 255, 0.9);
-        border: 3px solid #f06292;
-        border-radius: 20px;
-        padding: 25px;
-        margin-top: 20px;
-        color: #444;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border: 4px solid #f06292;
+        outline: 4px solid #ff1744;
+        outline-offset: -8px;
+        border-radius: 30px;
+        padding: 30px;
+        margin: 20px auto;
+        color: #d81b60;
         font-family: 'Quicksand', sans-serif;
-        font-size: 19px;
-        box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
-        
-        /* FIJAMOS LA ALTURA AQUÍ */
-        min-height: 220px; 
+        font-size: 20px;
+        font-weight: 500;
+        box-shadow: 0px 15px 35px rgba(240, 98, 146, 0.4);
+        min-height: 240px; 
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
     }
 
     .nombre-personaje { 
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 700; 
-        color: #d81b60; 
-        font-size: 24px; 
-        margin-bottom: 10px; 
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800; 
+        color: #ad1457; 
+        font-size: 28px; 
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px #ff80ab;
     }
 
-    /* Botones más bonitos y consistentes */
     .stButton>button {
-        border-radius: 15px;
-        border: 2px solid #f06292;
-        background-color: white;
-        color: #f06292;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 700;
-        transition: 0.3s;
-        height: 50px; /* Altura fija para botones */
+        background: linear-gradient(45deg, #ff4081, #f06292);
+        color: white !important;
+        border: 3px solid #f8bbd0;
+        border-radius: 50px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 14px;
+        height: 55px;
+        letter-spacing: 1px;
+        box-shadow: 0px 5px 0px #c2185b;
+        transition: 0.1s all;
+        margin-bottom: 10px;
+        width: 100%;
     }
+
     .stButton>button:hover {
-        background-color: #f06292;
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0px 4px 10px rgba(240, 98, 146, 0.3);
+        transform: translateY(2px);
+        box-shadow: 0px 2px 0px #c2185b;
+        background: linear-gradient(45deg, #f06292, #ff4081);
+        border-color: white;
+    }
+
+    .personaje-img {
+        border: 6px solid white;
+        box-shadow: 10px 10px 0px #f06292, 20px 20px 0px #f8bbd0;
+        border-radius: 20px;
     }
     </style>
     """, unsafe_allow_html=True)
