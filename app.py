@@ -1,26 +1,39 @@
-import streamlit as st
-
-# --- 1. CONFIGURACIÓN ---
-st.set_page_config(page_title="Felices 5 meses", layout="wide")
-
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
 
+    /* 1. ELIMINACIÓN DE ELEMENTOS FANTASMA Y BARRAS SUPERIORES */
     audio { display: none !important; }
+    
+    /* Oculta la línea de color de arriba y el menú de Streamlit */
+    [data-testid="stHeader"], [data-testid="stDecoration"], #MainMenu, footer, header {
+        visibility: hidden !important;
+        display: none !important;
+    }
 
+    /* Elimina el espacio reservado arriba para que la consola suba */
+    .block-container {
+        padding-top: 0rem !important;
+        margin-top: -30px !important;
+    }
+
+    /* Oculta bloques vacíos que generan rectángulos raros */
+    [data-testid="stVerticalBlock"] > div:empty {
+        display: none !important;
+    }
+
+    /* 2. DISEÑO DE LA APP */
     .stApp { 
         background: linear-gradient(135deg, #e57399 0%, #f48fb1 50%, #ad1457 100%);
         background-attachment: fixed;
     }
 
-    /* Forzamos a que la consola sea angosta y centrada */
     .marco-consola {
         background-color: #f06292;
         border: 10px solid #ad1457;
         border-radius: 20px;
         padding: 15px;
-        width: 380px; /* Ancho más corto tipo consola portátil */
+        width: 380px; 
         margin: 0 auto;
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
     }
@@ -30,7 +43,7 @@ st.markdown("""
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
         background-size: cover;
         background-position: center;
-        height: 220px; /* Más angosta proporcionalmente */
+        height: 220px;
         border: 4px solid #333;
         border-bottom: none;
         border-radius: 10px 10px 0 0;
@@ -79,23 +92,9 @@ st.markdown("""
         border-radius: 50px;
         border: 3px solid #f8bbd0;
         font-family: 'Montserrat', sans-serif;
-        width: 250px; /* Botón también más acorde al ancho */
+        width: 250px; 
         height: 45px;
         box-shadow: 0px 5px 0px #78002e;
-    }
-    /* Ocultar bloques vacíos de Streamlit y el botón fantasma */
-    [data-testid="stVerticalBlock"] > div:empty {
-        display: none !important;
-    }
-    
-    /* Eliminar el espacio extra que Streamlit pone arriba por defecto */
-    .block-container {
-        padding-top: 2rem !important;
-    }
-
-    /* Ocultar el menú superior y el footer para que se vea más limpio */
-    #MainMenu, footer, header {
-        visibility: hidden;
     }
     </style>
     """, unsafe_allow_html=True)
