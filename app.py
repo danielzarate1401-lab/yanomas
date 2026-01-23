@@ -4,6 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Felices 5 meses", layout="wide")
 
 # --- 2. ESTILOS CSS (DISEÑO CONSOLA INTEGRADA) ---
+# --- 2. ESTILOS CSS (CONSOLA REFINADA) ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
@@ -20,16 +21,17 @@ st.markdown("""
         border: 10px solid #ad1457;
         border-radius: 20px;
         padding: 15px;
-        max-width: 600px;
+        max-width: 550px;
         margin: 0 auto;
         box-shadow: 0px 20px 40px rgba(0,0,0,0.3);
     }
 
     .pantalla-juego {
+        background-color: #333;
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
         background-size: cover;
         background-position: center;
-        height: 350px;
+        height: 250px; /* Pantalla más angosta */
         border: 5px solid #333;
         border-bottom: none;
         border-radius: 10px 10px 0 0;
@@ -37,10 +39,11 @@ st.markdown("""
         justify-content: center;
         align-items: flex-end;
         position: relative;
+        overflow: hidden;
     }
 
     .personaje-img {
-        height: 85%;
+        height: 95%; /* Personaje ocupa casi todo el alto de la pantalla angosta */
         z-index: 2;
         filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.5));
     }
@@ -67,8 +70,14 @@ st.markdown("""
         margin-top: 30px;
         display: flex;
         flex-direction: column;
-        gap: 10px;
         align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .stButton {
+        display: flex;
+        justify-content: center;
     }
 
     .stButton>button {
@@ -78,8 +87,8 @@ st.markdown("""
         border: 3px solid #f8bbd0;
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
-        width: 250px;
-        height: 50px;
+        width: 300px; /* Ancho fijo para que todos sean iguales */
+        height: 55px;
         box-shadow: 0px 6px 0px #78002e;
         transition: 0.1s;
     }
@@ -566,33 +575,29 @@ historia = {
 }
 
 # --- 5. LÓGICA DE PANTALLAS ---
-# Verifica que esta línea 'if' esté pegada al borde izquierdo (sin espacios)
-
 if st.session_state.jugando:
-    # 1. Buscamos la escena actual
     escena = historia.get(st.session_state.paso, historia[0])
     
-    # 2. Dibujamos la Consola
-    st.markdown('<div class="consola-container">', unsafe_allow_html=True)
+    st.markdown('<div class="marco-consola">', unsafe_allow_html=True)
     
-    # Capa de Pantalla con el personaje
+    # PANTALLA ANGOSTA
     st.markdown(f'''
         <div class="pantalla-juego">
-            <img src="{escena["imagen"]}" class="personaje-overlay">
+            <img src="{escena["imagen"]}" class="personaje-img">
         </div>
     ''', unsafe_allow_html=True)
     
-    # Capa de Diálogo
+    # CAJA DE DIÁLOGO
     st.markdown(f'''
         <div class="dialogo-box">
             <div class="nombre-personaje">{escena["personaje"]}</div>
-            <div style="font-size: 18px; line-height: 1.4;">{escena["texto"]}</div>
+            <div style="font-size: 18px;">{escena["texto"]}</div>
         </div>
     ''', unsafe_allow_html=True)
-    
-    st.write("") # Espacio necesario para Streamlit
+    st.markdown('</div>', unsafe_allow_html=True)
 
-    # 3. Botones de Acción
+    # BOTONES DE JUEGO (Centrados)
+    st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if "opciones" in escena:
         for opcion in escena["opciones"]:
             if st.button(opcion["texto"]):
@@ -606,22 +611,24 @@ if st.session_state.jugando:
             else:
                 st.session_state.jugando = False
                 st.rerun()
-                
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # --- LÓGICA DE AUDIO ---
+    # Lógica de audio
     if "musica" in escena:
         if escena["musica"] != st.session_state.musica_actual:
             st.session_state.musica_actual = escena["musica"]
-
     if st.session_state.musica_actual and st.session_state.musica_actual != "ninguna":
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
 
 else:
-    # PANTALLA DE INICIO (Cuando no estamos jugando)
-    st.markdown('<div class="consola-container" style="text-align:center;">', unsafe_allow_html=True)
-    st.title("💖 Nuestra Historia 💖")
-    st.write("Presiona el botón para encender la consola")
+    # --- PANTALLA DE INICIO CENTRADA Y UNIFICADA ---
+    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 410px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
+    st.markdown('<h1 style="color:white; font-family:Montserrat; text-shadow: 2px 2px #ad1457;">💖 NUESTRA HISTORIA 💖</h1>', unsafe_allow_html=True)
+    st.markdown('<p style="color:white; font-family:Quicksand;">Cargando recuerdos...</p>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    # Botón en el mismo punto exacto
+    st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if st.button("ENCENDER CONSOLA"):
         st.session_state.jugando = True
         st.session_state.paso = 0
