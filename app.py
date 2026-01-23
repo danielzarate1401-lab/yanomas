@@ -556,42 +556,41 @@ historia = {
     }
 }
 
-# ... después del diccionario historia y los estilos CSS ...
-
 # --- 5. LÓGICA DE PANTALLAS ---
+# Verifica que esta línea 'if' esté pegada al borde izquierdo (sin espacios)
+
 if st.session_state.jugando:
-    # Obtenemos la escena actual
+    # 1. Buscamos la escena actual
     escena = historia.get(st.session_state.paso, historia[0])
     
-    # --- AQUÍ VA EL HTML DE LA CONSOLA ---
+    # 2. Dibujamos la Consola
     st.markdown('<div class="consola-container">', unsafe_allow_html=True)
     
-    # 1. La Pantalla (con el personaje dentro)
+    # Capa de Pantalla con el personaje
     st.markdown(f'''
         <div class="pantalla-juego">
             <img src="{escena["imagen"]}" class="personaje-overlay">
         </div>
     ''', unsafe_allow_html=True)
     
-    # 2. La Caja de Diálogo
+    # Capa de Diálogo
     st.markdown(f'''
         <div class="dialogo-box">
             <div class="nombre-personaje">{escena["personaje"]}</div>
-            <div style="font-size: 18px;">{escena["texto"]}</div>
+            <div style="font-size: 18px; line-height: 1.4;">{escena["texto"]}</div>
         </div>
     ''', unsafe_allow_html=True)
     
-    # 3. Los Botones (Controladores de la consola)
-    st.write("") # Un pequeño espacio
-    
+    st.write("") # Espacio necesario para Streamlit
+
+    # 3. Botones de Acción
     if "opciones" in escena:
         for opcion in escena["opciones"]:
             if st.button(opcion["texto"]):
                 st.session_state.paso = opcion["destino"]
                 st.rerun()
     else:
-        # Botón único para avanzar
-        if st.button("CONTINUAR A"): # Puedes ponerle 'A' como los botones de consola
+        if st.button("PULSA 'A' PARA CONTINUAR"):
             if escena["siguiente"] is not None:
                 st.session_state.paso = escena["siguiente"]
                 st.rerun()
@@ -599,12 +598,23 @@ if st.session_state.jugando:
                 st.session_state.jugando = False
                 st.rerun()
                 
-    st.markdown('</div>', unsafe_allow_html=True) # Cierre del contenedor de la consola
+    st.markdown('</div>', unsafe_allow_html=True)
 
-    # --- LÓGICA DE AUDIO (OCULTA) ---
+    # --- LÓGICA DE AUDIO ---
     if "musica" in escena:
         if escena["musica"] != st.session_state.musica_actual:
             st.session_state.musica_actual = escena["musica"]
 
     if st.session_state.musica_actual and st.session_state.musica_actual != "ninguna":
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
+
+else:
+    # PANTALLA DE INICIO (Cuando no estamos jugando)
+    st.markdown('<div class="consola-container" style="text-align:center;">', unsafe_allow_html=True)
+    st.title("💖 Nuestra Historia 💖")
+    st.write("Presiona el botón para encender la consola")
+    if st.button("ENCENDER CONSOLA"):
+        st.session_state.jugando = True
+        st.session_state.paso = 0
+        st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
