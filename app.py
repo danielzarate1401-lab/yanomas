@@ -4,51 +4,46 @@ import streamlit as st
 # Esta debe ser la PRIMERA función de streamlit que se ejecute
 st.set_page_config(page_title="Felices 5 meses", layout="wide")
 
-# --- 2. ESTILOS CSS (SIN EL BOTÓN ROSA DE ARRIBA) ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
 
-    /* 1. PARCHE DE CAMUFLAJE (OCULTA EL BOTÓN FEO) */
-    .stApp::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60px; /* Ajusta este alto si el botón sigue asomándose */
-        background: #e57399; /* El color exacto de tu fondo superior */
-        z-index: 999998; /* Justo debajo de la consola, pero encima de todo lo demás */
-    }
-
-    /* 2. LIMPIEZA DE BARRAS */
-    [data-testid="stHeader"], [data-testid="stDecoration"] {
+    /* 1. OCULTAR TODO LO QUE NO SEA NUESTRA CONSOLA */
+    audio { display: none !important; }
+    
+    /* Matamos el header, la decoración y cualquier barra de Streamlit */
+    [data-testid="stHeader"], [data-testid="stDecoration"], footer, header {
         display: none !important;
+        height: 0px !important;
+        opacity: 0 !important;
     }
 
+    /* Quitamos el espacio en blanco de arriba */
     .block-container {
         padding-top: 0rem !important;
+        max-width: 100% !important;
     }
 
-    /* 3. DISEÑO DE LA APP */
+    /* 2. DISEÑO DE LA APP */
     .stApp { 
         background: linear-gradient(135deg, #e57399 0%, #f48fb1 50%, #ad1457 100%);
         background-attachment: fixed;
     }
 
+    /* EL CAMBIO CLAVE: Subimos la consola con margen negativo para que tape el hueco */
     .marco-consola {
         position: relative;
-        z-index: 999999; /* La consola queda arriba de todo */
+        z-index: 1000000 !important; /* Prioridad máxima */
         background-color: #f06292;
         border: 10px solid #ad1457;
         border-radius: 20px;
         padding: 15px;
         width: 380px; 
-        margin: 20px auto 0 auto; /* Bajamos un poco la consola para que respire */
+        margin: -40px auto 0 auto; /* Este -40px sube la consola hasta arriba */
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
     }
 
-    /* ... mantén el resto de tu CSS (pantalla-juego, personaje-img, etc.) igual ... */
+    /* ... mantén tus clases de pantalla-juego, personaje-img, etc. igual ... */
     
     .pantalla-juego {
         background-color: #333;
@@ -96,6 +91,8 @@ st.markdown("""
         flex-direction: column;
         align-items: center;
         width: 100%;
+        position: relative;
+        z-index: 1000001; /* Botones también por encima */
     }
 
     .stButton>button {
@@ -110,6 +107,7 @@ st.markdown("""
     }
     </style>
     """, unsafe_allow_html=True)
+
 # --- 3. INICIALIZACIÓN DE ESTADOS ---
 if 'paso' not in st.session_state:
     st.session_state.paso = 0
@@ -584,12 +582,12 @@ historia = {
     }
 }
 
-# --- 5. LÓGICA DE PANTALLAS ---
+# --- 4. LÓGICA DE PANTALLAS ---
 if st.session_state.jugando:
-    # Obtenemos la escena
+    # Asegúrate de tener tu diccionario 'historia' definido antes de esto
     escena = historia.get(st.session_state.paso, historia[0])
     
-    # 1. El Marco Rosa (Consola)
+    # Marco de la Consola
     st.markdown('<div class="marco-consola">', unsafe_allow_html=True)
     st.markdown(f'''
         <div class="pantalla-juego">
@@ -602,7 +600,7 @@ if st.session_state.jugando:
     ''', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True) 
 
-    # 2. Los Botones (Controladores)
+    # Contenedor de Botones
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if "opciones" in escena:
         for opcion in escena["opciones"]:
@@ -610,7 +608,6 @@ if st.session_state.jugando:
                 st.session_state.paso = opcion["destino"]
                 st.rerun()
     else:
-        # Usamos una 'key' única para evitar que Streamlit se confunda
         if st.button("CONTINUAR", key="btn_next"):
             if escena["siguiente"] is not None:
                 st.session_state.paso = escena["siguiente"]
@@ -620,7 +617,7 @@ if st.session_state.jugando:
                 st.rerun()
     st.markdown('</div>', unsafe_allow_html=True) 
 
-    # 3. Audio (Oculto)
+    # Audio
     if "musica" in escena:
         if escena["musica"] != st.session_state.musica_actual:
             st.session_state.musica_actual = escena["musica"]
@@ -628,7 +625,7 @@ if st.session_state.jugando:
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
 
 else:
-    # PANTALLA DE INICIO SIN BOTONES FANTASMA
+    # PANTALLA DE INICIO
     st.markdown('<div class="marco-consola" style="text-align:center; min-height: 300px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
     st.markdown('<h1 style="color:white; font-family:Montserrat; font-size: 28px;">💖 NUESTRA HISTORIA</h1>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
