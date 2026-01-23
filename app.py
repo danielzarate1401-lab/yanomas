@@ -3,7 +3,6 @@ import streamlit as st
 # --- 1. CONFIGURACIÓN ---
 st.set_page_config(page_title="Felices 5 meses", layout="wide")
 
-# --- 2. ESTILOS CSS (ESTILO NOVELA VISUAL CLÁSICA) ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
@@ -15,24 +14,24 @@ st.markdown("""
         background-attachment: fixed;
     }
 
+    /* Forzamos a que la consola sea angosta y centrada */
     .marco-consola {
         background-color: #f06292;
         border: 10px solid #ad1457;
         border-radius: 20px;
         padding: 15px;
-        
-        /* CAMBIA ESTO: Un ancho fijo más pequeño lo hará ver más angosto */
-        width: 400px; 
-        margin: 0 auto; /* Esto lo mantiene centrado en la página */
-        
-        box-shadow: 0px 20px 40px rgba(0,0,0,0.3);
+        width: 380px; /* Ancho más corto tipo consola portátil */
+        margin: 0 auto;
+        box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
     }
 
     .pantalla-juego {
         background-color: #333;
-        /* ... resto de tu código de imagen de fondo ... */
-        height: 220px; /* Un poco más bajita también */
-        border: 5px solid #333;
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
+        background-size: cover;
+        background-position: center;
+        height: 220px; /* Más angosta proporcionalmente */
+        border: 4px solid #333;
         border-bottom: none;
         border-radius: 10px 10px 0 0;
         display: flex;
@@ -40,44 +39,37 @@ st.markdown("""
         align-items: flex-end;
         position: relative;
         overflow: hidden;
+        padding-left: 15px;
     }
 
     .personaje-img {
-        height: 80%; /* Bajamos del 95% al 80% para que respire más */
+        height: 85%; 
         z-index: 2;
         filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.4));
     }
-    
+
     .dialogo-box {
-        background-color: rgba(255, 255, 255, 0.95);
-        border: 5px solid #333;
+        background-color: white;
+        border: 4px solid #333;
         border-radius: 0 0 10px 10px;
-        padding: 20px;
+        padding: 15px;
         color: #333;
         font-family: 'Quicksand', sans-serif;
-        min-height: 150px;
+        min-height: 140px;
     }
 
     .nombre-personaje {
         font-family: 'Montserrat', sans-serif;
         color: #ad1457;
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 5px;
-        text-transform: uppercase;
     }
 
     .contenedor-botones {
-        margin-top: 25px;
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centra los botones respecto a la página */
-        width: 100%;
-    }
-
-    /* Forzar centrado de botones en Streamlit */
-    .stButton {
-        display: flex;
-        justify-content: center;
+        align-items: center;
         width: 100%;
     }
 
@@ -87,17 +79,9 @@ st.markdown("""
         border-radius: 50px;
         border: 3px solid #f8bbd0;
         font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
-        width: 280px; 
-        height: 50px;
-        box-shadow: 0px 6px 0px #78002e;
-        transition: 0.1s;
-    }
-
-    .stButton>button:hover {
-        transform: translateY(3px);
-        box-shadow: 0px 2px 0px #78002e;
-        border-color: white;
+        width: 250px; /* Botón también más acorde al ancho */
+        height: 45px;
+        box-shadow: 0px 5px 0px #78002e;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -583,21 +567,24 @@ if st.session_state.jugando:
     # MARCO CENTRADO
     st.markdown('<div class="marco-consola">', unsafe_allow_html=True)
     
-    # PANTALLA (Personaje a la izquierda)
+   if st.session_state.jugando:
+    escena = historia.get(st.session_state.paso, historia[0])
+    
+    # IMPORTANTE: Que no haya nada entre el 'if' y este markdown
+    st.markdown('<div class="marco-consola">', unsafe_allow_html=True)
+    
     st.markdown(f'''
         <div class="pantalla-juego">
             <img src="{escena["imagen"]}" class="personaje-img">
         </div>
-    ''', unsafe_allow_html=True)
-    
-    # CAJA DE TEXTO
-    st.markdown(f'''
         <div class="dialogo-box">
             <div class="nombre-personaje">{escena["personaje"]}</div>
-            <div style="font-size: 17px; line-height: 1.3;">{escena["texto"]}</div>
+            <div style="font-size: 16px;">{escena["texto"]}</div>
         </div>
     ''', unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True) # Cierra el marco rosa
+    st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
 
     # BOTONES CENTRADOS
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
