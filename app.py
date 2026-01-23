@@ -20,34 +20,34 @@ st.markdown("""
         border: 10px solid #ad1457;
         border-radius: 20px;
         padding: 15px;
-        max-width: 500px; /* Más angosta para look vertical/portátil */
-        margin: 0 auto;
+        
+        /* CAMBIA ESTO: Un ancho fijo más pequeño lo hará ver más angosto */
+        width: 400px; 
+        margin: 0 auto; /* Esto lo mantiene centrado en la página */
+        
         box-shadow: 0px 20px 40px rgba(0,0,0,0.3);
     }
 
     .pantalla-juego {
         background-color: #333;
-        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
-        background-size: cover;
-        background-position: center;
-        height: 250px;
+        /* ... resto de tu código de imagen de fondo ... */
+        height: 220px; /* Un poco más bajita también */
         border: 5px solid #333;
         border-bottom: none;
         border-radius: 10px 10px 0 0;
         display: flex;
-        justify-content: flex-start; /* Mueve al personaje a la izquierda */
+        justify-content: flex-start; 
         align-items: flex-end;
         position: relative;
         overflow: hidden;
-        padding-left: 20px; /* Espacio desde el borde izquierdo */
     }
 
     .personaje-img {
-        height: 90%; 
+        height: 80%; /* Bajamos del 95% al 80% para que respire más */
         z-index: 2;
         filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.4));
     }
-
+    
     .dialogo-box {
         background-color: rgba(255, 255, 255, 0.95);
         border: 5px solid #333;
