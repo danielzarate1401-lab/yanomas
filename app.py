@@ -20,8 +20,9 @@ st.markdown("""
     }
 
     .stApp { 
-        /* === AQUÍ CAMBIAS EL FONDO DE LA APP === */
-        background: linear-gradient(135deg, #e57399 0%, #f48fb1 50%, #ad1457 100%);
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/salonxddd.jpg');
+        background-size: cover;
+        background-position: center;
         background-attachment: fixed;
     }
 
@@ -39,7 +40,7 @@ st.markdown("""
 
     .pantalla-juego {
         background-color: #333;
-        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/salonxddd.jpg'); 
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
         background-size: cover;
         background-position: center;
         height: 220px;
