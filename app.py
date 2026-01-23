@@ -3,81 +3,90 @@ import streamlit as st
 # --- 1. CONFIGURACIÓN ---
 st.set_page_config(page_title="Felices 5 meses", layout="wide")
 
-# --- 2. ESTILOS CSS (ESTILO CONSOLA PORTÁTIL) ---
+# --- 2. ESTILOS CSS (DISEÑO CONSOLA INTEGRADA) ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
 
     audio { display: none !important; }
 
-    /* El espacio sobrante - Rosado Metálico */
     .stApp { 
-        background-color: #f48fb1;
-        background-image: linear-gradient(135deg, #f48fb1 0%, #ec407a 100%);
+        background: linear-gradient(135deg, #e57399 0%, #f48fb1 50%, #ad1457 100%);
+        background-attachment: fixed;
     }
 
-    /* El cuerpo de la consola */
-    .consola-container {
-        background: #f06292; /* Rosado base de la consola */
-        border: 8px solid #ad1457; /* Marco del color de los botones */
-        border-radius: 40px;
-        padding: 20px;
-        max-width: 500px;
+    .marco-consola {
+        background-color: #f06292;
+        border: 10px solid #ad1457;
+        border-radius: 20px;
+        padding: 15px;
+        max-width: 600px;
         margin: 0 auto;
-        box-shadow: inset -5px -5px 0px #c2185b, 10px 10px 20px rgba(0,0,0,0.2);
+        box-shadow: 0px 20px 40px rgba(0,0,0,0.3);
     }
 
-    /* La pantalla (Fondo + Personaje) */
     .pantalla-juego {
-        background-color: #222; /* Fondo de la pantalla */
-        background-image: url('TU_URL_DE_FONDO_AQUI'); /* Pon aquí el link de tu fondo */
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
         background-size: cover;
         background-position: center;
-        border: 10px solid #333;
-        border-radius: 10px;
-        height: 300px;
-        position: relative;
-        overflow: hidden;
+        height: 350px;
+        border: 5px solid #333;
+        border-bottom: none;
+        border-radius: 10px 10px 0 0;
         display: flex;
         justify-content: center;
         align-items: flex-end;
+        position: relative;
     }
 
-    /* El personaje dentro de la pantalla */
-    .personaje-overlay {
-        height: 90%;
-        filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.3));
+    .personaje-img {
+        height: 85%;
+        z-index: 2;
+        filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.5));
     }
 
-    /* Caja de diálogos debajo */
     .dialogo-box {
-        background: #fff;
-        border: 4px solid #ad1457;
-        border-radius: 15px;
-        padding: 15px;
-        margin-top: 15px;
+        background-color: rgba(255, 255, 255, 0.95);
+        border: 5px solid #333;
+        border-radius: 0 0 10px 10px;
+        padding: 20px;
         color: #333;
         font-family: 'Quicksand', sans-serif;
-        min-height: 150px;
+        min-height: 160px;
     }
 
     .nombre-personaje {
         font-family: 'Montserrat', sans-serif;
         color: #ad1457;
-        font-size: 20px;
-        margin-bottom: 5px;
+        font-size: 22px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
     }
 
-    /* Botones de la consola */
+    .contenedor-botones {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
     .stButton>button {
         background: #ad1457;
         color: white !important;
         border-radius: 50px;
-        border: none;
+        border: 3px solid #f8bbd0;
         font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
-        height: 45px;
-        box-shadow: 0px 4px 0px #78002e;
+        font-size: 16px;
+        width: 250px;
+        height: 50px;
+        box-shadow: 0px 6px 0px #78002e;
+        transition: 0.1s;
+    }
+
+    .stButton>button:hover {
+        transform: translateY(3px);
+        box-shadow: 0px 2px 0px #78002e;
     }
     </style>
     """, unsafe_allow_html=True)
