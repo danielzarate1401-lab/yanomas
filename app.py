@@ -3,8 +3,7 @@ import streamlit as st
 # --- 1. CONFIGURACIÓN ---
 st.set_page_config(page_title="Felices 5 meses", layout="wide")
 
-# --- 2. ESTILOS CSS (DISEÑO CONSOLA INTEGRADA) ---
-# --- 2. ESTILOS CSS (CONSOLA REFINADA) ---
+# --- 2. ESTILOS CSS (ESTILO NOVELA VISUAL CLÁSICA) ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
@@ -21,7 +20,7 @@ st.markdown("""
         border: 10px solid #ad1457;
         border-radius: 20px;
         padding: 15px;
-        max-width: 550px;
+        max-width: 500px; /* Más angosta para look vertical/portátil */
         margin: 0 auto;
         box-shadow: 0px 20px 40px rgba(0,0,0,0.3);
     }
@@ -31,21 +30,22 @@ st.markdown("""
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
         background-size: cover;
         background-position: center;
-        height: 250px; /* Pantalla más angosta */
+        height: 250px;
         border: 5px solid #333;
         border-bottom: none;
         border-radius: 10px 10px 0 0;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start; /* Mueve al personaje a la izquierda */
         align-items: flex-end;
         position: relative;
         overflow: hidden;
+        padding-left: 20px; /* Espacio desde el borde izquierdo */
     }
 
     .personaje-img {
-        height: 95%; /* Personaje ocupa casi todo el alto de la pantalla angosta */
+        height: 90%; 
         z-index: 2;
-        filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.5));
+        filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.4));
     }
 
     .dialogo-box {
@@ -55,29 +55,30 @@ st.markdown("""
         padding: 20px;
         color: #333;
         font-family: 'Quicksand', sans-serif;
-        min-height: 160px;
+        min-height: 150px;
     }
 
     .nombre-personaje {
         font-family: 'Montserrat', sans-serif;
         color: #ad1457;
-        font-size: 22px;
-        margin-bottom: 8px;
+        font-size: 20px;
+        margin-bottom: 5px;
         text-transform: uppercase;
     }
 
     .contenedor-botones {
-        margin-top: 30px;
+        margin-top: 25px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: center; /* Centra los botones respecto a la página */
         width: 100%;
     }
 
+    /* Forzar centrado de botones en Streamlit */
     .stButton {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
     .stButton>button {
@@ -86,9 +87,9 @@ st.markdown("""
         border-radius: 50px;
         border: 3px solid #f8bbd0;
         font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
-        width: 300px; /* Ancho fijo para que todos sean iguales */
-        height: 55px;
+        font-weight: 800;
+        width: 280px; 
+        height: 50px;
         box-shadow: 0px 6px 0px #78002e;
         transition: 0.1s;
     }
@@ -96,6 +97,7 @@ st.markdown("""
     .stButton>button:hover {
         transform: translateY(3px);
         box-shadow: 0px 2px 0px #78002e;
+        border-color: white;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -578,25 +580,26 @@ historia = {
 if st.session_state.jugando:
     escena = historia.get(st.session_state.paso, historia[0])
     
+    # MARCO CENTRADO
     st.markdown('<div class="marco-consola">', unsafe_allow_html=True)
     
-    # PANTALLA ANGOSTA
+    # PANTALLA (Personaje a la izquierda)
     st.markdown(f'''
         <div class="pantalla-juego">
             <img src="{escena["imagen"]}" class="personaje-img">
         </div>
     ''', unsafe_allow_html=True)
     
-    # CAJA DE DIÁLOGO
+    # CAJA DE TEXTO
     st.markdown(f'''
         <div class="dialogo-box">
             <div class="nombre-personaje">{escena["personaje"]}</div>
-            <div style="font-size: 18px;">{escena["texto"]}</div>
+            <div style="font-size: 17px; line-height: 1.3;">{escena["texto"]}</div>
         </div>
     ''', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # BOTONES DE JUEGO (Centrados)
+    # BOTONES CENTRADOS
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if "opciones" in escena:
         for opcion in escena["opciones"]:
@@ -604,7 +607,7 @@ if st.session_state.jugando:
                 st.session_state.paso = opcion["destino"]
                 st.rerun()
     else:
-        if st.button("PULSA 'A' PARA CONTINUAR"):
+        if st.button("CONTINUAR"):
             if escena["siguiente"] is not None:
                 st.session_state.paso = escena["siguiente"]
                 st.rerun()
@@ -613,7 +616,7 @@ if st.session_state.jugando:
                 st.rerun()
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # Lógica de audio
+    # Audio
     if "musica" in escena:
         if escena["musica"] != st.session_state.musica_actual:
             st.session_state.musica_actual = escena["musica"]
@@ -621,16 +624,15 @@ if st.session_state.jugando:
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
 
 else:
-    # --- PANTALLA DE INICIO CENTRADA Y UNIFICADA ---
-    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 410px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
-    st.markdown('<h1 style="color:white; font-family:Montserrat; text-shadow: 2px 2px #ad1457;">💖 NUESTRA HISTORIA 💖</h1>', unsafe_allow_html=True)
-    st.markdown('<p style="color:white; font-family:Quicksand;">Cargando recuerdos...</p>', unsafe_allow_html=True)
+    # PANTALLA DE INICIO (Mismo ancho y botones)
+    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 400px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
+    st.markdown('<h1 style="color:white; font-family:Montserrat; font-size: 35px;">💖</h1>', unsafe_allow_html=True)
+    st.markdown('<h2 style="color:white; font-family:Montserrat;">NUESTRA HISTORIA</h2>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
-    # Botón en el mismo punto exacto
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if st.button("ENCENDER CONSOLA"):
         st.session_state.jugando = True
         st.session_state.paso = 0
         st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)unsafe_allow_html=True)
