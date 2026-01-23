@@ -1,28 +1,32 @@
+import streamlit as st
+
+# --- 1. CONFIGURACIÓN ---
+# Esta debe ser la PRIMERA función de streamlit que se ejecute
+st.set_page_config(page_title="Felices 5 meses", layout="wide")
+
+# --- 2. ESTILOS CSS (SIN EL BOTÓN ROSA DE ARRIBA) ---
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Quicksand:wght@500;700&display=swap');
 
-    /* 1. ELIMINACIÓN DE ELEMENTOS FANTASMA Y BARRAS SUPERIORES */
+    /* 1. ELIMINACIÓN DE ELEMENTOS FANTASMA */
     audio { display: none !important; }
     
-    /* Oculta la línea de color de arriba y el menú de Streamlit */
     [data-testid="stHeader"], [data-testid="stDecoration"], #MainMenu, footer, header {
         visibility: hidden !important;
         display: none !important;
     }
 
-    /* Elimina el espacio reservado arriba para que la consola suba */
     .block-container {
         padding-top: 0rem !important;
         margin-top: -30px !important;
     }
 
-    /* Oculta bloques vacíos que generan rectángulos raros */
     [data-testid="stVerticalBlock"] > div:empty {
         display: none !important;
     }
 
-    /* 2. DISEÑO DE LA APP */
+    /* 2. DISEÑO DE LA CONSOLA */
     .stApp { 
         background: linear-gradient(135deg, #e57399 0%, #f48fb1 50%, #ad1457 100%);
         background-attachment: fixed;
