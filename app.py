@@ -651,7 +651,7 @@ historia = {
     },
     101: {
         "personaje": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/emocion_nueva.png", # Cambia por el link de la emoción
-        "texto": "hmmm..."
+        "texto": "hmmm...",
         "imagen": img_def,
         "siguiente": 48  
     },
