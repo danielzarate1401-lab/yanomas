@@ -192,7 +192,7 @@ img_def = "https://github.com/danielzarate1401-lab/yanomas/blob/main/Creig%20Tok
 historia = {
     0: {
         "personaje": "Daniel",
-        "texto": "Mi niño bonito, hoy cumplimos un mes más de relación y ahora que es parte de otro año quiero que sea más especial.",
+        "texto": "Hola, mi niño, hoy cumplimos un mes más de relación y ahora que es parte de otro año quiero que sea más especial.",
         "imagen": img_def,
         "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/31%20minutos%20-%20Karaoke%20-%20Yo%20opino.mp3",
         "siguiente": 1
@@ -205,13 +205,13 @@ historia = {
     },
     2: {
         "personaje": "Daniel",
-        "texto": "A programar, a vivir, a ser un novio tan bueno como tú.",
+        "texto": "Este año quiero aprender a programar, a vivir y a ser un novio tan bueno como tú.",
         "imagen": img_def,
         "siguiente": 3
     },
     3: {
         "personaje": "Daniel",
-        "texto": "Porque aunque tú digas que no, eres el mejor novio del mundo.",
+        "texto": "Porque aunque tú digas lo contrario, eres el mejor novio del mundo; tan maravilloso y unico",
         "imagen": img_def,
         "animacion": "shake",
         "siguiente": 4
@@ -236,7 +236,7 @@ historia = {
     },
     7: {
         "personaje": "Daniel",
-        "texto": "Te amo tanto, gracias por ser tu",
+        "texto": "Quiero que sepas que doy lo mejor de mi para ti, porque eres alguien que lo merece.",
         "imagen": img_def,
         "siguiente": 8
     },
@@ -254,19 +254,19 @@ historia = {
     },
     10: {
         "personaje": "Daniel",
-        "texto": "Tiene muchos personajes y eso, soy yo y, yo y también esta yo, y sans deltarune ",
+        "texto": "Tiene muchos personajes y eso, soy yo y... yo y.... también estoy yo... y sans deltarune ",
         "imagen": img_def,
         "siguiente": 11
     },
     11: {
         "personaje": "Daniel",
-        "texto": "Ah y estas tu creo ",
+        "texto": "Ah y estas tu, creo ",
         "imagen": img_def,
         "siguiente": 12
     },
     12: {
         "personaje": "Daniel",
-        "texto": "Bueno, como otras novelas visuales esta tiene opciones de dialogos, viste asi se bueno soy",
+        "texto": "Bueno, como otras novelas visuales esta tiene opciones de dialogo. Viste? Asi se bueno soy.",
         "imagen": img_def,
         "siguiente": 13
     },
@@ -277,11 +277,11 @@ historia = {
          "opciones": [
             {"texto": "Menea la chapa remix", "destino": 14},
             {"texto": "Amarillo amarillo platano", "destino": 14}
-         ] # <-- CORREGIDO AQUÍ
+         ] 
     },
     14: {
         "personaje": "Daniel",
-        "texto": "Yo se yo se, increible.",
+        "texto": "Yo se, increible...",
         "imagen": img_def,
         "siguiente": 15
     },
@@ -311,25 +311,25 @@ historia = {
     },
     19: {
         "personaje": "Daniel",
-        "texto": "Tanto como para pensar el el pasado de forma bonita ",
+        "texto": "Tanto como para pensar en el pasado de forma bonita... ",
         "imagen": img_def,
         "siguiente": 20
     },
     20: {
         "personaje": "Daniel",
-        "texto": "O como para esforzarme por un buen futuro",
+        "texto": "...O como para esforzarme por un buen futuro.",
         "imagen": img_def,
         "siguiente": 21
     },
     21: {
         "personaje": "Daniel",
-        "texto": "Mi niño lindo",
+        "texto": "Mi niño lindo.",
         "imagen": img_def,
         "siguiente": 22
     },
     22: {
         "personaje": "Daniel",
-        "texto": "Feliz quinto mes ",
+        "texto": "Feliz quinto mes btw.",
         "imagen": img_def,
         "siguiente": 23
     },
@@ -358,31 +358,31 @@ historia = {
     },
     26: {
         "personaje": "Daniel",
-        "texto": "Sabes, no me gustaba mucho recordar las cosas ",
+        "texto": "Sabes, no me gustaba mucho recordar las cosas... ",
         "imagen": img_def,
         "siguiente": 27
     },
     27: {
         "personaje": "Daniel",
-        "texto": "Nunca de hecho, es como un metodo de defenza para no deprimirme  ",
+        "texto": "Nunca de hecho, es como un metodo de defenza para no deprimirme. ",
         "imagen": img_def,
         "siguiente": 28
     },
     28: {
         "personaje": "Daniel",
-        "texto": "Solo ",
+        "texto": "Solo.... ",
         "imagen": img_def,
         "siguiente": 29
     },
     29: {
         "personaje": "Daniel",
-        "texto": "Cada que pensaba en el pasado ",
+        "texto": "Cada que pensaba en el pasado... ",
         "imagen": img_def,
         "siguiente": 30
     },
     30: {
         "personaje": "Daniel",
-        "texto": "Me venian a la mente malos recuerdos ",
+        "texto": "...Me venian a la mente malos recuerdos ",
         "imagen": img_def,
         "siguiente": 31
     },
@@ -394,30 +394,30 @@ historia = {
     },
     32: {
         "personaje": "Daniel",
-        "texto": "Cosas de las que me arrepiento",
+        "texto": "Cosas de las que me arrepiento...",
         "imagen": img_def,
         "siguiente": 33
     },
     33: {
         "personaje": "Daniel",
-        "texto": "Dias que preferiria que no hayan existido ",
+        "texto": "Dias que preferiria que no hayan existido. ",
         "imagen": img_def,
         "siguiente": 34
     },
     34: {
         "personaje": "Daniel",
-        "texto": "Prefiero evitar los problemas, pero",
+        "texto": "Supongo que sabes como prefiero evitar los problemas, pero...",
         "imagen": img_def,
         "siguiente": 35
     },
     35: {
         "personaje": "Daniel",
-        "texto": "Ahora hay algo que cambia, estas tu aqui conmigo :3",
+        "texto": "Ahora siento que algo cambia, y eso es que tu estas aqui conmigo :3",
         "imagen": img_def,
         "siguiente": 36
     },
     36: {
-        "personaje": "Daniel",
+        "personaje": "Supuestamente Pam",
         "texto": "21 de Agosto de 2025... Justo andaba escuchando el OST de Undertale hace unos minutos. ¡Hahaha!",
         "imagen": img_def,
         "siguiente": 37
@@ -429,14 +429,14 @@ historia = {
         "siguiente": 38
     },
     38: {
-        "personaje": "Daniel",
-        "texto": "Para que te hagas una idea, ya con las primeras tres notas supe que era Hopes and Dreams. Fue tan simple, pero de un momento para otro, una ligera forma de querer llamar tu atención funcionó.",
+        "personaje": "Supuestamente Pam",
+        "texto": "Para que te hagas una idea, ya con las primeras tres notas supe que era Hopes and Dreams....",
         "imagen": img_def,
         "siguiente": 39
     },
     39: {
         "personaje": "Daniel",
-        "texto": "Me hizo feliz. Capté la atención del que no sabía que sería el mejor novio del mundo.",
+        "texto": "Fue tan simple, pero de un momento para otro, una ligera forma de querer llamar tu atención funcionó. Me hizo feliz. Capté la atención del que no sabía que sería el mejor novio del mundo.",
         "imagen": img_def,
         "siguiente": 40
     },
@@ -461,7 +461,7 @@ historia = {
     },
     43: {
         "personaje": "Daniel",
-        "texto": "Cuando vimos Hazbin Hotel... ¡Por ti empecé a ver South Park, por cierto! Todos los personajes con los que nos identificamos:",
+        "texto": "Cuando vimos Hazbin Hotel... ¡Por ti empecé a ver South Park, lo que me recuerda todos los personajes con los que nos identificamos:",
         "imagen": img_def,
         "siguiente": 44
     },
@@ -484,10 +484,10 @@ historia = {
         "siguiente": 47
     },
     47: {
-        "personaje": "Daniel",
-        "texto": "'¡NOO, TÚ NO IBAS A DECIR ESO!' '¿POR QUÉ ACTUABAS COMO SI NO ME IBA A DAR CUENTA?'. Amo, amo pasar tiempo contigo. Es tan divertido cuando estamos en llamada.",
+        "personaje": "Supuestamente Pam",
+        "texto": "'¡NOO, TÚ NO IBAS A DECIR ESO!' '¿POR QUÉ ACTUABAS COMO SI NO ME IBA A DAR CUENTA?'. Amo, amo pasar tiempo contigo. Es tan divertido cuando estamos en llamada...",
         "imagen": img_def,
-        "siguiente": 48
+        "siguiente": 75
     },
     48: {
         "personaje": "Daniel",
@@ -498,7 +498,7 @@ historia = {
     },
     49: {
         "personaje": "Daniel",
-        "texto": "Son cosas por las que también hemos pasado. Te he hecho daño. Son malos recuerdos, pero no quiero olvidarlos.",
+        "texto": "Son cosas por las que también hemos pasado. Te he hecho daño. Son malos recuerdos... pero no es algo que quiera olvidar.",
         "imagen": img_def,
         "siguiente": 50
     },
@@ -524,7 +524,7 @@ historia = {
     # --- CAMINO PLANIFICAR (FUTURO COMPLETO SIN RECORTES) ---
     54: {
         "personaje": "Daniel",
-        "texto": "Hmmm futuro, es curioso. No puedo dejar de pensarte en él, sabes.",
+        "texto": "Hmmm futuro.... es curioso. No puedo dejar de pensarte en él, Sabes?",
         "imagen": img_def,
         "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Weezer%20-%20Island%20In%20The%20Sun%20(Instrumental%20Original).mp3",
         "siguiente": 55
@@ -537,31 +537,31 @@ historia = {
     },
     56: {
         "personaje": "Daniel",
-        "texto": "Algo humilde, tendríamos mis ahorros para no preocuparnos por un buen rato pero sería lindo. Tu ya todo trabajador y yo apenas entrando a la carrera. Groomer.",
+        "texto": "Algo humilde, tendríamos mis ahorros para no preocuparnos por un buen rato pero sería lindo... Tu ya todo trabajador y yo apenas entrando a la carrera. Groomer.",
         "imagen": img_def,
         "siguiente": 57
     },
     57: {
         "personaje": "Daniel",
-        "texto": "Podríamos salir seguido, al parque, por sushi, al mall, a donde sea. Quiero ir contigo, quiero conocer la ciudad.",
+        "texto": "...Podríamos salir seguido al parque, por sushi, al mall, a donde sea. Quiero ir contigo, quiero conocer la ciudad.",
         "imagen": img_def,
         "siguiente": 58
     },
     58: {
         "personaje": "Daniel",
-        "texto": "Quiero ir a la tienda donde dijiste “1800 ah perdón es que estoy mal de la cabeza”. Quiero conocer a tus amigos y familia aunque les caiga mal.",
+        "texto": "Quiero ir a la tienda donde dijiste “1800 ah perdón es que estoy mal de la cabeza”. Quiero conocer a tus amigos y familia.... aunque seguramente les caiga mal.",
         "imagen": img_def,
         "siguiente": 59
     },
     59: {
         "personaje": "Daniel",
-        "texto": "Luego, cuando tengamos nuestra casa propia, obtengas el trabajo que quieres... ¿Te imaginas ya con empleo? ¿No sería lindo?",
+        "texto": "Luego, en algun punto tendremos nuestra casa propia, terminare de estudiar y tu tendras el trabajo que querias... ¿Te imaginas ya con empleo? ¿No sería lindo?",
         "imagen": img_def,
         "siguiente": 60
     },
     60: {
         "personaje": "Daniel",
-        "texto": "Rezo por que todo salga bien, le pido a todo y a todos por nuestro futuro. Pero creo que rezar no basta.",
+        "texto": "Rezo por que todo salga bien, le pido a Dios y a todo y todos porque tengamos un buen futuro... Aunque rezar no basta.",
         "imagen": img_def,
         "siguiente": 61
     },
@@ -579,19 +579,19 @@ historia = {
     },
     63: {
         "personaje": "Daniel",
-        "texto": "Quiero que nuestros personajes sean conocidos, quiero que triunfemos en nuestro futuro. Imagina tu enorme estante de merch de Pinkie Pie.",
+        "texto": "Quiero que nuestros personajes sean conocidos, quiero que triunfemos en nuestro futuro.Solo imagina tu enorme estante de merch de Pinkie Pie...",
         "imagen": img_def,
         "siguiente": 64
     },
     64: {
         "personaje": "Daniel",
-        "texto": "Al lado mi colección del manga de JoJos. Nuestras PCs al lado una de la otra para programar y jugar. En nuestra cocina un refri lleno de comida para que cocinemos lo que queramos.",
+        "texto": "Al lado estaria mi colección del manga de JoJos. Nuestras PCs al lado una de la otra para programar y jugar. En nuestra cocina un refri lleno de comida para que cocinemos lo que queramos.",
         "imagen": img_def,
         "siguiente": 65
     },
     65: {
         "personaje": "Daniel",
-        "texto": "Un castillo para nuestros gatitos Nirvana y Korn. Y un cuarto para nuestros hijos. Sip ya sabes, nuestros hijos: Kurt y Frances, nuestros amores.",
+        "texto": "Un castillo para nuestros gatitos Nirvana y Korn. Y un cuarto para nuestros hijos.... Sip ya sabes, nuestros hijos: Kurt y Frances, nuestros amores :3",
         "imagen": img_def,
         "siguiente": 66
     },
@@ -609,7 +609,7 @@ historia = {
     },
     68: {
         "personaje": "Daniel",
-        "texto": "...Serv, Makima, Varka, Treintaiun Minutos, Venecolano, Venecalono, IV, Cloe, KKK, Copi-Copi, Elemento, Adjetivo, Mente en Blanco, Chaucha, Yo Soy, Calugoso, Duquesa, Reina...",
+        "texto": "...Serv, Makima, Varka, Treintaiun Minutos, Venecolano, Venecalono, Iv, Cloe, C++,  KKK, Copi-Copi, Elemento, Adjetivo, Mente en Blanco, Chaucha, Yo Soy, Calugoso, Duquesa, Reina...",
         "imagen": img_def,
         "siguiente": 69
     },
@@ -645,10 +645,16 @@ historia = {
     },
     74: {
         "personaje": "Daniel",
-        "texto": "Mi wekito, felices 5 meses, te amo. Muak.",
+        "texto": "Mi amor, mi Pam, felices 5 meses y vamos por muchos mas, te amo.",
         "imagen": img_def,
         "siguiente": None
-    }
+    },
+    101: {
+        "personaje": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/emocion_nueva.png", # Cambia por el link de la emoción
+        "texto": "hmmm..."
+        "imagen": img_def,
+        "siguiente": 48  
+    },
 }
 
 # --- 4. LÓGICA DE PANTALLAS ---
