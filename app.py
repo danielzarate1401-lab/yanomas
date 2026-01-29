@@ -33,7 +33,7 @@ st.markdown("""
 
     @keyframes moverDiagonal {
         from { background-position: 0 0; }
-        to { background-position: 900px 900px; }
+        to { background-position: -900px 900px; }
     }
 
     /* 2. CONSOLA CON EFECTO DE BRILLO (SHINE) */
@@ -47,7 +47,7 @@ st.markdown("""
         width: 380px; 
         margin: -40px auto 0 auto; 
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
-        overflow: hidden; /* Necesario para que el brillo no se salga del marco */
+        overflow: hidden; 
     }
 
     /* LA LÍNEA DE LUZ */
