@@ -25,9 +25,9 @@ st.markdown("""
     /* 1. FONDO CON MOVIMIENTO DIAGONAL PERFECTO */
     .stApp { 
         background-color: #e57399; 
-        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondonosotros.png'); 
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondoreal.png'); 
         background-repeat: repeat;
-        background-size: 150px; 
+        background-size: 750px; 
         animation: moverDiagonal 60s linear infinite;
     }
 
