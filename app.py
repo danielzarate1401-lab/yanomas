@@ -28,7 +28,7 @@ st.markdown("""
         /* REEMPLAZA LA URL DE ABAJO CON TU PATRÓN (Corazones, estrellas, etc.) */
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondonosotros.png'); 
         background-repeat: repeat;
-        background-size: 2000px; /* Tamaño del patrón */
+        background-size: 1000px; /* Tamaño del patrón */
         animation: moverFondo 20s linear infinite;
     }
 
