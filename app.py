@@ -34,11 +34,9 @@ st.markdown("""
 
     @keyframes moverDiagonal {
         from { 
-            /* Empieza en la esquina superior izquierda */
             background-position: 0 0; 
         }
         to { 
-            /* Se desplaza 1000px a la derecha y 1000px hacia abajo */
             background-position: 1000px 1000px; 
         }
     }
