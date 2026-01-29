@@ -26,7 +26,7 @@ st.markdown("""
     .stApp { 
         background-color: #e57399; /* Color base rosa */
         /* REEMPLAZA LA URL DE ABAJO CON TU PATRÓN (Corazones, estrellas, etc.) */
-        background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); 
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondonosotros.png'); 
         background-repeat: repeat;
         background-size: 200px; /* Tamaño del patrón */
         animation: moverFondo 20s linear infinite;
