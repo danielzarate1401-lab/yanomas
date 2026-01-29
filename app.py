@@ -650,21 +650,25 @@ if st.session_state.jugando:
     st.markdown('</div>', unsafe_allow_html=True) 
 
     # Contenedor de Botones
+  # 2. Los Botones (Controladores)
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if "opciones" in escena:
-        for opcion in escena["opciones"]:
-            if st.button(opcion["texto"], key=f"btn_{opcion['destino']}"):
+        # Usamos enumerate para que cada botón tenga un número de índice único (i)
+        for i, opcion in enumerate(escena["opciones"]):
+            # La key ahora combina el destino con el índice i, garantizando que sea única
+            if st.button(opcion["texto"], key=f"btn_{opcion['destino']}_{i}"):
                 st.session_state.paso = opcion["destino"]
                 st.rerun()
     else:
-        if st.button("CONTINUAR", key="btn_next"):
+        # Botón de continuar normal
+        if st.button("CONTINUAR", key="btn_next_global"):
             if escena["siguiente"] is not None:
                 st.session_state.paso = escena["siguiente"]
                 st.rerun()
             else:
                 st.session_state.jugando = False
                 st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True) 
+    st.markdown('</div>', unsafe_allow_html=True)
 
     # Audio
     if "musica" in escena:
