@@ -33,7 +33,7 @@ st.markdown("""
 
     @keyframes moverDiagonal {
         from { background-position: 0 0; }
-        to { background-position: -900px 900px; }
+        to { background-position: -1500px 1500px; }
     }
 
     .caja-titulo {
