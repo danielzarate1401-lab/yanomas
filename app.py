@@ -22,26 +22,21 @@ st.markdown("""
         max-width: 100% !important;
     }
 
-   /* FONDO CON MOVIMIENTO DIAGONAL */
+    /* 1. FONDO CON MOVIMIENTO DIAGONAL PERFECTO */
     .stApp { 
         background-color: #e57399; 
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondonosotros.png'); 
         background-repeat: repeat;
-        background-size: 750px; 
-        /* He subido el tiempo a 40s para que el movimiento diagonal no maree */
-        animation: moverDiagonal 40s linear infinite;
+        background-size: 150px; 
+        animation: moverDiagonal 60s linear infinite;
     }
 
     @keyframes moverDiagonal {
-        from { 
-            background-position: 0 0; 
-        }
-        to { 
-            background-position: 1000px 1000px; 
-        }
+        from { background-position: 0 0; }
+        to { background-position: 900px 900px; }
     }
 
-    /* 2. EL MARCO ROSA DE LA CONSOLA */
+    /* 2. CONSOLA CON EFECTO DE BRILLO (SHINE) */
     .marco-consola {
         position: relative;
         z-index: 1000000 !important;
@@ -52,12 +47,37 @@ st.markdown("""
         width: 380px; 
         margin: -40px auto 0 auto; 
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
+        overflow: hidden; /* Necesario para que el brillo no se salga del marco */
     }
 
-    /* 3. PANTALLA DEL JUEGO */
+    /* LA LÍNEA DE LUZ */
+    .marco-consola::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -150%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+            to right, 
+            rgba(255,255,255,0) 0%, 
+            rgba(255,255,255,0.4) 50%, 
+            rgba(255,255,255,0) 100%
+        );
+        transform: skewX(-25deg); /* Inclina la línea para que se vea más natural */
+        animation: relucir 4s infinite;
+    }
+
+    @keyframes relucir {
+        0% { left: -150%; }
+        30% { left: 150%; } /* Pasa rápido de un lado a otro */
+        100% { left: 150%; } /* Se queda esperando antes de repetir */
+    }
+
+    /* 3. RESTO DE LA INTERFAZ */
     .pantalla-juego {
         background-color: #333;
-        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondonosotros.png'); 
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
         background-size: cover;
         background-position: center;
         height: 220px;
@@ -69,7 +89,7 @@ st.markdown("""
         align-items: flex-end;
         position: relative;
         overflow: hidden;
-        padding-left: 15px;
+        z-index: 1;
     }
 
     .personaje-img {
@@ -86,6 +106,8 @@ st.markdown("""
         color: #333;
         font-family: 'Quicksand', sans-serif;
         min-height: 140px;
+        position: relative;
+        z-index: 1;
     }
 
     .nombre-personaje {
