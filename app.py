@@ -47,7 +47,7 @@ st.markdown("""
         width: 380px; 
         margin: -40px auto 0 auto; 
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
-        overflow: hidden; 
+        overflow: visible; 
     }
 
     /* LA LÍNEA DE LUZ */
@@ -65,7 +65,7 @@ st.markdown("""
             rgba(255,255,255,0) 100%
         );
         transform: skewX(-25deg); /* Inclina la línea para que se vea más natural */
-        animation: relucir 4s infinite;
+        animation: relucir 8s infinite;
     }
 
     @keyframes relucir {
