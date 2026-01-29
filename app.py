@@ -117,27 +117,30 @@ st.markdown("""
         margin-bottom: 5px;
     }
 
-    .contenedor-botones {
+   .contenedor-botones {
         margin-top: 20px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row; /* Alineación horizontal */
+        flex-wrap: wrap;    /* Si no caben, bajan a la siguiente línea */
+        justify-content: center; 
+        gap: 15px;          /* Espacio entre botones */
         width: 100%;
         position: relative;
         z-index: 1000001;
     }
 
-   .stButton>button {
-        background: #ad1457 !important; /* Color sólido siempre */
+    .stButton>button {
+        background: #ad1457 !important;
         color: white !important;
         border-radius: 50px;
         border: 3px solid #f8bbd0;
         font-family: 'Montserrat', sans-serif;
-        width: 250px; 
+        /* Reducimos un poco el ancho para que quepan dos cómodamente */
+        width: 160px; 
         height: 45px;
         box-shadow: 0px 5px 0px #78002e;
         transition: all 0.2s ease;
-        opacity: 1 !important; /* Bloqueamos la transparencia */
+        opacity: 1 !important;
     }
 
     /* EFECTO AL PASAR EL MOUSE (QUITAMOS TRANSPARENCIA) */
@@ -653,21 +656,26 @@ if st.session_state.jugando:
   # 2. Los Botones (Controladores)
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if "opciones" in escena:
-        # Usamos enumerate para que cada botón tenga un número de índice único (i)
+        # Creamos tantas columnas como opciones haya
+        cols = st.columns(len(escena["opciones"]))
+        
         for i, opcion in enumerate(escena["opciones"]):
-            # La key ahora combina el destino con el índice i, garantizando que sea única
-            if st.button(opcion["texto"], key=f"btn_{opcion['destino']}_{i}"):
-                st.session_state.paso = opcion["destino"]
-                st.rerun()
+            # Dibujamos cada botón en su respectiva columna
+            with cols[i]:
+                if st.button(opcion["texto"], key=f"btn_{opcion['destino']}_{i}"):
+                    st.session_state.paso = opcion["destino"]
+                    st.rerun()
     else:
-        # Botón de continuar normal
-        if st.button("CONTINUAR", key="btn_next_global"):
-            if escena["siguiente"] is not None:
-                st.session_state.paso = escena["siguiente"]
-                st.rerun()
-            else:
-                st.session_state.jugando = False
-                st.rerun()
+        # Botón de continuar único (centrado)
+        col_center = st.columns([1, 2, 1]) # Columna del centro más ancha
+        with col_center[1]:
+            if st.button("CONTINUAR", key="btn_next_global"):
+                if escena["siguiente"] is not None:
+                    st.session_state.paso = escena["siguiente"]
+                    st.rerun()
+                else:
+                    st.session_state.jugando = False
+                    st.rerun()
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Audio
