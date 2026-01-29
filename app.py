@@ -47,7 +47,7 @@ st.markdown("""
         width: 380px; 
         margin: -40px auto 0 auto; 
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
-        overflow: visible; 
+        overflow: hidden; 
     }
 
     /* LA LÍNEA DE LUZ */
