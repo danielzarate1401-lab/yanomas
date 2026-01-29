@@ -22,20 +22,25 @@ st.markdown("""
         max-width: 100% !important;
     }
 
-    /* 1. FONDO CON PATRÓN ANIMADO */
+   /* FONDO CON MOVIMIENTO DIAGONAL */
     .stApp { 
-        background-color: #e57399; /* Color base rosa */
-        /* REEMPLAZA LA URL DE ABAJO CON TU PATRÓN (Corazones, estrellas, etc.) */
+        background-color: #e57399; 
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondonosotros.png'); 
         background-repeat: repeat;
-        background-size: 1000px; /* Tamaño del patrón */
-        animation: moverFondo 20s linear infinite;
+        background-size: 750px; 
+        /* He subido el tiempo a 40s para que el movimiento diagonal no maree */
+        animation: moverDiagonal 40s linear infinite;
     }
 
-    /* Lógica del movimiento hacia la derecha */
-    @keyframes moverFondo {
-        from { background-position: 0 0; }
-        to { background-position: 1000px 0; }
+    @keyframes moverDiagonal {
+        from { 
+            /* Empieza en la esquina superior izquierda */
+            background-position: 0 0; 
+        }
+        to { 
+            /* Se desplaza 1000px a la derecha y 1000px hacia abajo */
+            background-position: 1000px 1000px; 
+        }
     }
 
     /* 2. EL MARCO ROSA DE LA CONSOLA */
