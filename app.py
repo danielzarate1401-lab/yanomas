@@ -22,12 +22,23 @@ st.markdown("""
         max-width: 100% !important;
     }
 
+    /* 1. FONDO CON PATRÓN ANIMADO */
     .stApp { 
-        /* === AQUÍ CAMBIAS EL FONDO DE LA APP === */
-        background: linear-gradient(135deg, #e57399 0%, #f48fb1 50%, #ad1457 100%);
-        background-attachment: fixed;
+        background-color: #e57399; /* Color base rosa */
+        /* REEMPLAZA LA URL DE ABAJO CON TU PATRÓN (Corazones, estrellas, etc.) */
+        background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); 
+        background-repeat: repeat;
+        background-size: 200px; /* Tamaño del patrón */
+        animation: moverFondo 20s linear infinite;
     }
 
+    /* Lógica del movimiento hacia la derecha */
+    @keyframes moverFondo {
+        from { background-position: 0 0; }
+        to { background-position: 1000px 0; }
+    }
+
+    /* 2. EL MARCO ROSA DE LA CONSOLA */
     .marco-consola {
         position: relative;
         z-index: 1000000 !important;
@@ -40,13 +51,13 @@ st.markdown("""
         box-shadow: 0px 15px 30px rgba(0,0,0,0.3);
     }
 
+    /* 3. PANTALLA DEL JUEGO */
     .pantalla-juego {
         background-color: #333;
-        /* === AQUÍ CAMBIAS EL FONDO DE LA PANTALLA (DETRÁS DEL PERSONAJE) === */
-        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondonosotros.png'); 
         background-size: cover;
         background-position: center;
-        height: 500px;
+        height: 220px;
         border: 4px solid #333;
         border-bottom: none;
         border-radius: 10px 10px 0 0;
