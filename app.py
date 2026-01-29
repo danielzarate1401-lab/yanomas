@@ -118,28 +118,26 @@ st.markdown("""
     }
 
    .contenedor-botones {
-        margin-top: 20px;
+        margin-top: 10px; /* Menos espacio con la caja de diálogo */
         display: flex;
-        flex-direction: row; /* Alineación horizontal */
-        flex-wrap: wrap;    /* Si no caben, bajan a la siguiente línea */
-        justify-content: center; 
-        gap: 15px;          /* Espacio entre botones */
+        flex-direction: row; 
+        justify-content: flex-start; /* Alinea al inicio (izquierda) */
+        gap: 10px; /* Espacio pequeño entre ellos */
         width: 100%;
-        position: relative;
-        z-index: 1000001;
+        padding-left: 5px; /* Pequeño ajuste para que no toque el borde del marco */
     }
 
     .stButton>button {
         background: #ad1457 !important;
         color: white !important;
-        border-radius: 50px;
-        border: 3px solid #f8bbd0;
+        border-radius: 10px; /* Un poco menos redondos para que parezcan botones de consola */
+        border: 2px solid #f8bbd0;
         font-family: 'Montserrat', sans-serif;
-        /* Reducimos un poco el ancho para que quepan dos cómodamente */
-        width: 160px; 
-        height: 45px;
-        box-shadow: 0px 5px 0px #78002e;
-        transition: all 0.2s ease;
+        width: auto; /* El botón se ajusta al tamaño del texto */
+        min-width: 120px; 
+        height: 40px;
+        box-shadow: 0px 4px 0px #78002e;
+        transition: all 0.1s ease;
         opacity: 1 !important;
     }
 
@@ -652,30 +650,25 @@ if st.session_state.jugando:
     ''', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True) 
 
-    # Contenedor de Botones
-  # 2. Los Botones (Controladores)
+# Usamos un solo contenedor para todos los botones de la escena
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
+    
     if "opciones" in escena:
-        # Creamos tantas columnas como opciones haya
-        cols = st.columns(len(escena["opciones"]))
-        
+        # Creamos los botones uno tras otro dentro del mismo bloque
         for i, opcion in enumerate(escena["opciones"]):
-            # Dibujamos cada botón en su respectiva columna
-            with cols[i]:
-                if st.button(opcion["texto"], key=f"btn_{opcion['destino']}_{i}"):
-                    st.session_state.paso = opcion["destino"]
-                    st.rerun()
+            if st.button(opcion["texto"], key=f"btn_{opcion['destino']}_{i}"):
+                st.session_state.paso = opcion["destino"]
+                st.rerun()
     else:
-        # Botón de continuar único (centrado)
-        col_center = st.columns([1, 2, 1]) # Columna del centro más ancha
-        with col_center[1]:
-            if st.button("CONTINUAR", key="btn_next_global"):
-                if escena["siguiente"] is not None:
-                    st.session_state.paso = escena["siguiente"]
-                    st.rerun()
-                else:
-                    st.session_state.jugando = False
-                    st.rerun()
+        # Botón único de continuar
+        if st.button("CONTINUAR", key="btn_next_global"):
+            if escena["siguiente"] is not None:
+                st.session_state.paso = escena["siguiente"]
+                st.rerun()
+            else:
+                st.session_state.jugando = False
+                st.rerun()
+                
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Audio
