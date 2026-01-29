@@ -80,7 +80,7 @@ st.markdown("""
         background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/fondo_escena.jpg'); 
         background-size: cover;
         background-position: center;
-        height: 220px;
+        height: 500px;
         border: 4px solid #333;
         border-bottom: none;
         border-radius: 10px 10px 0 0;
@@ -127,8 +127,8 @@ st.markdown("""
         z-index: 1000001;
     }
 
-    .stButton>button {
-        background: #ad1457;
+   .stButton>button {
+        background: #ad1457 !important; /* Color sólido siempre */
         color: white !important;
         border-radius: 50px;
         border: 3px solid #f8bbd0;
@@ -136,6 +136,23 @@ st.markdown("""
         width: 250px; 
         height: 45px;
         box-shadow: 0px 5px 0px #78002e;
+        transition: all 0.2s ease;
+        opacity: 1 !important; /* Bloqueamos la transparencia */
+    }
+
+    /* EFECTO AL PASAR EL MOUSE (QUITAMOS TRANSPARENCIA) */
+    .stButton>button:hover {
+        background: #d81b60 !important; /* Un rosa un poco más brillante */
+        border-color: white !important;
+        transform: translateY(2px); /* Baja un poquito */
+        box-shadow: 0px 3px 0px #78002e;
+        opacity: 1 !important;
+    }
+
+    /* EFECTO AL HACER CLIC */
+    .stButton>button:active {
+        transform: translateY(5px); /* Se hunde totalmente */
+        box-shadow: 0px 0px 0px #78002e;
     }
     </style>
     """, unsafe_allow_html=True)
