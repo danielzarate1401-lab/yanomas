@@ -36,6 +36,25 @@ st.markdown("""
         to { background-position: -900px 900px; }
     }
 
+    .caja-titulo {
+        background: rgba(255, 255, 255, 0.2); /* Blanco muy transparente */
+        backdrop-filter: blur(10px);        /* Efecto de desenfoque de fondo */
+        border-radius: 15px;                 /* Bordes redondeados */
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        margin-bottom: 30px;                 /* Espacio con la consola */
+        text-align: center;
+        box-shadow: 0 8px 32px 0 rgba(173, 20, 87, 0.3); /* Sombra rosada sutil */
+    }
+
+    .caja-titulo h1 {
+        color: white !important;
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra en las letras */
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
     /* 2. CONSOLA CON EFECTO DE BRILLO (SHINE) */
     .marco-consola {
         position: relative;
@@ -680,10 +699,19 @@ if st.session_state.jugando:
 
 else:
     # PANTALLA DE INICIO
-    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 300px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
-    st.markdown('<h1 style="color:white; font-family:Montserrat; font-size: 28px;">💖 NUESTRA HISTORIA</h1>', unsafe_allow_html=True)
+    # Usamos la nueva clase 'caja-titulo' para que el texto sea legible
+    st.markdown("""
+        <div class="caja-titulo">
+            <h1>💖 NUESTRA HISTORIA</h1>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # El marco de la consola (la parte rosa que brilla)
+    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 200px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
+    st.markdown('<p style="color:white; font-family:Quicksand; font-size: 18px;">¿Lista para recordar nuestro camino?</p>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
+    # El botón para empezar
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if st.button("ENCENDER CONSOLA", key="btn_start"):
         st.session_state.jugando = True
