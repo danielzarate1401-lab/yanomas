@@ -680,7 +680,7 @@ if st.session_state.jugando:
                 st.rerun()
     else:
         # Botón único de continuar
-        if st.button("CONTINUAR", key="btn_next_global"):
+        if st.button("Continuar", key="btn_next_global"):
             if escena["siguiente"] is not None:
                 st.session_state.paso = escena["siguiente"]
                 st.rerun()
@@ -702,18 +702,18 @@ else:
     # Usamos la nueva clase 'caja-titulo' para que el texto sea legible
     st.markdown("""
         <div class="caja-titulo">
-            <h1>💖 NUESTRA HISTORIA</h1>
+            <h1> Felices 5 Meses amor</h1>
         </div>
     """, unsafe_allow_html=True)
 
     # El marco de la consola (la parte rosa que brilla)
     st.markdown('<div class="marco-consola" style="text-align:center; min-height: 200px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
-    st.markdown('<p style="color:white; font-family:Quicksand; font-size: 18px;">¿Lista para recordar nuestro camino?</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color:white; font-family:Quicksand; font-size: 18px;">Para el mejor novio del mundo</p>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
     # El botón para empezar
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
-    if st.button("ENCENDER CONSOLA", key="btn_start"):
+    if st.button("Empezar", key="btn_start"):
         st.session_state.jugando = True
         st.session_state.paso = 0
         st.rerun()
