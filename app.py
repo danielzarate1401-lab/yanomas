@@ -117,7 +117,7 @@ st.markdown("""
         filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.4));
     }
     .manos-overlay {
-        position: absolute;
+        position: relative;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
