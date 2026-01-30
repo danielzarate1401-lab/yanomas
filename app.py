@@ -738,9 +738,9 @@ else:
     # 2. Marco de la Consola (Todo en un solo bloque para que no se escape nada)
     inicio_html = """
     <div class="marco-consola" style="text-align:center; padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <img src="https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/chibi.png" width="160" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px;">
+        <img src="https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/pony.png" width="160" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px;">
         <p style="color:white; font-family:Quicksand; font-size: 18px; margin: 0; width: 100%;">
-            Para el mejor novio del mundo
+            Para mi niño, Pam
         </p>
     </div>
     """
