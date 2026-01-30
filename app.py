@@ -735,17 +735,16 @@ else:
     # 1. Título
     st.markdown('<div class="caja-titulo"><h1> Felices 5 Meses amor</h1></div>', unsafe_allow_html=True)
 
-    # 2. Abrimos el marco de la consola
-    st.markdown('<div class="marco-consola" style="text-align:center; padding: 20px;">', unsafe_allow_html=True)
-    
-    # Colocamos la imagen usando el comando nativo de Streamlit (esto evita el error del link roto)
-    st.image("https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/chibi.png", width=160)
-    
-    # Texto decorativo
-    st.markdown('<p style="color:white; font-family:Quicksand; font-size: 18px; margin-top: 15px;">Para el mejor novio del mundo</p>', unsafe_allow_html=True)
-    
-    # Cerramos el marco
-    st.markdown('</div>', unsafe_allow_html=True)
+    # 2. Marco de la Consola (Todo en un solo bloque para que no se escape nada)
+    inicio_html = """
+    <div class="marco-consola" style="text-align:center; padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/chibi.png" width="160" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px;">
+        <p style="color:white; font-family:Quicksand; font-size: 18px; margin: 0; width: 100%;">
+            Para el mejor novio del mundo
+        </p>
+    </div>
+    """
+    st.markdown(inicio_html, unsafe_allow_html=True)
     
     # 3. El botón para empezar
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
