@@ -116,6 +116,15 @@ st.markdown("""
         z-index: 2;
         filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.4));
     }
+    .manos-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%; /* Ajusta según el tamaño de tu imagen */
+        z-index: 3;  /* Por encima del personaje que tiene z-index 2 */
+        pointer-events: none; /* Para que no bloquee los clics */
+    }
 
     .dialogo-box {
         background-color: white;
@@ -705,12 +714,23 @@ if st.session_state.jugando:
 
 else:
     # PANTALLA DE INICIO
-    # Usamos la nueva clase 'caja-titulo' para que el texto sea legible
+    
     st.markdown("""
         <div class="caja-titulo">
             <h1> Felices 5 Meses amor</h1>
         </div>
     """, unsafe_allow_html=True)
+    # Manos
+manos_html = ""
+if "manos" in escena:
+    manos_html = f'<img src="{escena["manos"]}" class="manos-overlay">'
+
+st.markdown(f'''
+    <div class="pantalla-juego">
+        <img src="{escena['personaje']}" class="personaje-img">
+        {manos_html}
+    </div>
+''', unsafe_allow_html=True)
 
     # El marco de la consola (la parte rosa que brilla)
     st.markdown('<div class="marco-consola" style="text-align:center; min-height: 200px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
