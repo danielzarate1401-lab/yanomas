@@ -119,9 +119,9 @@ st.markdown("""
     .manos-overlay {
         position: absolute;
         bottom: 0;
-        left: 50%;
+        left: 0%;
         transform: translateX(-50%);
-        width: 10%; /* Ajusta según el tamaño de tu imagen */
+        width: 50%; /* Ajusta según el tamaño de tu imagen */
         z-index: 3;  /* Por encima del personaje que tiene z-index 2 */
         pointer-events: none; /* Para que no bloquee los clics */
     }
