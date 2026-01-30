@@ -732,18 +732,18 @@ if st.session_state.jugando:
 else:
     # --- PANTALLA DE INICIO ---
     
-    # 1. Título arriba (fuera del brillo)
+    # 1. Título
     st.markdown("""
         <div class="caja-titulo">
             <h1> Felices 5 Meses amor</h1>
         </div>
     """, unsafe_allow_html=True)
 
-    # 2. El marco de la consola (TODO lo que esté aquí adentro tendrá el brillo)
-    st.markdown(f'''
+    # 2. Marco de la Consola con la imagen corregida
+    st.markdown('''
         <div class="marco-consola" style="text-align:center; padding: 20px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
             
-            <img src="https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/pony.png" 
+            <img src="https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/chibi.png" 
                  style="width: 160px; margin-bottom: 15px;">
             
             <p style="color:white; font-family:Quicksand; font-size: 18px; margin: 0;">
