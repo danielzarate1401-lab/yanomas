@@ -667,6 +667,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Mi amor, mi Pam, felices 5 meses y vamos por muchos mas, te amo.",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/mano.png",
         "siguiente": None
     },
     75: {
@@ -729,7 +730,13 @@ if st.session_state.jugando:
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
 
 else:
-    # --- PANTALLA DE INICIO (RESTABLECIDA) ---
+    # PANTALLA DE INICIO
+    st.markdown(f'''
+        <div style="text-align: center;">
+            <img src="https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/pony.png" width="150">
+        </div>
+    ''', unsafe_allow_html=True)
+
     st.markdown("""
         <div class="caja-titulo">
             <h1> Felices 5 Meses amor</h1>
