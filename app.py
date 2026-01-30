@@ -117,14 +117,13 @@ st.markdown("""
         filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.4));
     }
     .manos-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 12.5%;
-        transform: translateX(-50%);
-        width: 25%; /* Ajusta según el tamaño de tu imagen */
-        z-index: 3;  /* Por encima del personaje que tiene z-index 2 */
-        pointer-events: none; /* Para que no bloquee los clics */
-    }
+    height: 85%; /* Misma altura que el personaje */
+    z-index: 3;  /* Un nivel arriba para que tape al personaje */
+    position: absolute; 
+    top: 0;    
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.4));
+    pointer-events: none; /* Evita que las manos "bloqueen" los clics */
+}
 
     .dialogo-box {
         background-color: white;
