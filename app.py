@@ -96,7 +96,7 @@ st.markdown("""
     /* 3. RESTO DE LA INTERFAZ */
     .pantalla-juego {
         background-color: #333;
-        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/images.jpeg'); 
+        background-image: url('https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cuarto.png'); 
         background-size: cover;
         background-position: center;
         height: 500px;
