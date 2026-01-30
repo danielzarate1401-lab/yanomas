@@ -668,59 +668,70 @@ historia = {
 
 # --- 4. LÓGICA DE PANTALLAS ---
 if st.session_state.jugando:
-    # Obtenemos la escena actual
+    # Asegúrate de tener tu diccionario 'historia' definido antes de esto
     escena = historia.get(st.session_state.paso, historia[0])
     
-    # 1. Preparar el HTML de las manos (solo si existen en la escena)
+    # --- BLOQUE DE MANOS MOVIDO AQUÍ ---
     manos_html = ""
     if "manos" in escena:
         manos_html = f'<img src="{escena["manos"]}" class="manos-overlay">'
     
-    # 2. Marco de la Consola
+    # Marco de la Consola
     st.markdown('<div class="marco-consola">', unsafe_allow_html=True)
-    
-    # Renderizamos la pantalla con: Fondo (imagen), Personaje y Manos
     st.markdown(f'''
-        <div class="pantalla-juego" style="background-image: url('{escena.get('imagen', '')}'); background-size: cover; background-position: center;">
-            <img src="{escena.get('personaje', '')}" class="personaje-img">
-            {manos_html}
+        <div class="pantalla-juego">
+            <img src="{escena["imagen"]}" class="personaje-img">
         </div>
         <div class="dialogo-box">
-            <div class="nombre-personaje">{escena.get('nombre', '???')}</div>
-            <div style="font-size: 16px; line-height: 1.3;">{escena.get('texto', '')}</div>
+            <div class="nombre-personaje">{escena["personaje"]}</div>
+            <div style="font-size: 16px; line-height: 1.3;">{escena["texto"]}</div>
         </div>
     ''', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True) 
 
-    # 3. Botones de opciones o continuar
+# Usamos un solo contenedor para todos los botones de la escena
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
+    
     if "opciones" in escena:
+        # Creamos los botones uno tras otro dentro del mismo bloque
         for i, opcion in enumerate(escena["opciones"]):
             if st.button(opcion["texto"], key=f"btn_{opcion['destino']}_{i}"):
                 st.session_state.paso = opcion["destino"]
                 st.rerun()
     else:
+        # Botón único de continuar
         if st.button("Continuar", key="btn_next_global"):
-            if escena.get("siguiente") is not None:
+            if escena["siguiente"] is not None:
                 st.session_state.paso = escena["siguiente"]
                 st.rerun()
             else:
                 st.session_state.jugando = False
                 st.rerun()
+                
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # 4. Audio
+    # Audio
     if "musica" in escena:
         if escena["musica"] != st.session_state.musica_actual:
             st.session_state.musica_actual = escena["musica"]
-    
     if st.session_state.musica_actual and st.session_state.musica_actual != "ninguna":
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
 
 else:
-    # PANTALLA DE INICIO (Se mantiene igual)
-    st.markdown('<div class="caja-titulo"><h1> Felices 5 Meses amor</h1></div>', unsafe_allow_html=True)
-    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 200px; display:flex; flex-direction:column; justify-content:center;"><p style="color:white; font-family:Quicksand; font-size: 18px;">Para el mejor novio del mundo</p></div>', unsafe_allow_html=True)
+    # PANTALLA DE INICIO
+    
+    st.markdown("""
+        <div class="caja-titulo">
+            <h1> Felices 5 Meses amor</h1>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # El marco de la consola (la parte rosa que brilla)
+    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 200px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
+    st.markdown('<p style="color:white; font-family:Quicksand; font-size: 18px;">Para el mejor novio del mundo</p>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    # El botón para empezar
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if st.button("Empezar", key="btn_start"):
         st.session_state.jugando = True
