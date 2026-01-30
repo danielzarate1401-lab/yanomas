@@ -534,80 +534,80 @@ historia = {
     54: {
         "personaje": "Daniel",
         "texto": "Hmmm futuro.... es curioso. No puedo dejar de pensarte en él, Sabes?",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
         "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Weezer%20-%20Island%20In%20The%20Sun%20(Instrumental%20Original).mp3",
         "siguiente": 55
     },
     55: {
         "personaje": "Daniel",
         "texto": "Mi futuro ideal es uno donde ya estemos viviendo juntos en Chile, empezaríamos en un departamento pequeño por un tiempo.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 56
     },
     56: {
         "personaje": "Daniel",
         "texto": "Algo humilde, tendríamos mis ahorros para no preocuparnos por un buen rato pero sería lindo... Tu ya todo trabajador y yo apenas entrando a la carrera. Groomer.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 57
     },
     57: {
         "personaje": "Daniel",
         "texto": "...Podríamos salir seguido al parque, por sushi, al mall, a donde sea. Quiero ir contigo, quiero conocer la ciudad.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoAbajo.png",
         "siguiente": 58
     },
     58: {
         "personaje": "Daniel",
         "texto": "Quiero ir a la tienda donde dijiste “1800 ah perdón es que estoy mal de la cabeza”. Quiero conocer a tus amigos y familia.... aunque seguramente les caiga mal.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 59
     },
     59: {
         "personaje": "Daniel",
         "texto": "Luego, en algun punto tendremos nuestra casa propia, terminare de estudiar y tu tendras el trabajo que querias... ¿Te imaginas ya con empleo? ¿No sería lindo?",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 60
     },
     60: {
         "personaje": "Daniel",
         "texto": "Rezo por que todo salga bien, le pido a Dios y a todo y todos porque tengamos un buen futuro... Aunque rezar no basta.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoAbajo.png",
         "siguiente": 61
     },
     61: {
         "personaje": "Daniel",
         "texto": "Debemos esforzarnos, como pareja, para que todo nos salga bien, no quiero decepcionarte. Solo así podré estar verdaderamente orgulloso de ayudarte a cumplir tus metas.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
         "siguiente": 62
     },
     62: {
         "personaje": "Daniel",
         "texto": "Imagina cuando programemos un juego buenísimo. Sé que quiero hacerlo contigo, quiero planearlo.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 63
     },
     63: {
         "personaje": "Daniel",
         "texto": "Quiero que nuestros personajes sean conocidos, quiero que triunfemos en nuestro futuro.Solo imagina tu enorme estante de merch de Pinkie Pie...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 64
     },
     64: {
         "personaje": "Daniel",
         "texto": "Al lado estaria mi colección del manga de JoJos. Nuestras PCs al lado una de la otra para programar y jugar. En nuestra cocina un refri lleno de comida para que cocinemos lo que queramos.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 65
     },
     65: {
         "personaje": "Daniel",
         "texto": "Un castillo para nuestros gatitos Nirvana y Korn. Y un cuarto para nuestros hijos.... Sip ya sabes, nuestros hijos: Kurt y Frances, nuestros amores :3",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 66
     },
     66: {
         "personaje": "Daniel",
         "texto": "Ah y nuestros otros hijos: Nirvana 2, Pinkie Pie, Shadow, Apolo, Yorkenson, Nainileven, Nirvana 3,5, Rainbow Dash, Rarity, Starlight, Sunset, Cheese Sandwich, Pelirrojo, Minipam, Minidani...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 67
     },
     67: {
@@ -643,19 +643,19 @@ historia = {
     72: {
         "personaje": "Daniel",
         "texto": "Me esforzaré porque todo salga bien, esto es una prueba de ello por ejemplo. Te amo tanto como para dejar el procrastinamiento, te amo tanto como para dar todo de mi.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoAbajo.png",
         "siguiente": 73
     },
     73: {
         "personaje": "Daniel",
         "texto": "Porque al final, mi niño, al final tu mereces lo mejor de lo mejor. Mereces un mejor novio, pero yo quiero ser ese mejor novio.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
         "siguiente": 74
     },
     74: {
         "personaje": "Daniel",
         "texto": "Mi amor, mi Pam, felices 5 meses y vamos por muchos mas, te amo.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": None
     },
     75: {
