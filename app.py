@@ -203,7 +203,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Hola, mi niño, hoy cumplimos un mes más de relación y ahora que es parte de otro año quiero que sea más especial.",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
-        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/shy.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/mano.png",
         "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/31%20minutos%20-%20Karaoke%20-%20Yo%20opino.mp3",
         "siguiente": 1
     },
@@ -223,6 +223,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Porque aunque tú digas lo contrario, eres el mejor novio del mundo; tan maravilloso y unico",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/shy.png",
         "animacion": "shake",
         "siguiente": 4
     },
@@ -230,6 +231,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Jamás me había sentido tan querido y correspondido por alguien.",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/shy.png",
         "siguiente": 5
     },
     5: {
@@ -293,6 +295,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Yo se, increible...",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/shy.png",
         "siguiente": 15
     },
     15: {
@@ -311,6 +314,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Me gustas mucho",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/shy.png",
         "siguiente": 18
     },
     18: {
@@ -329,6 +333,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "...O como para esforzarme por un buen futuro.",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/shy.png",
         "siguiente": 21
     },
     21: {
@@ -353,6 +358,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "¿Qué quieres hacer?",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/shy.png",
         "musica": "ninguna",
         "opciones": [
             {"texto": "Recordar", "destino": 25},
@@ -436,6 +442,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Jajajaj, ¿sí se escucha como Hopes and Dreams? Aún la sigo practicando. Justo el inicio se me complica un poquito.",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/shy.png",
         "siguiente": 38
     },
     38: {
@@ -473,6 +480,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Cuando vimos Hazbin Hotel... ¡Por ti empecé a ver South Park, lo que me recuerda todos los personajes con los que nos identificamos:",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/shy.png",
         "siguiente": 44
     },
     44: {
@@ -528,6 +536,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Porque eres alguien que vale la pena, porque me motivas a ser mejor persona. Te amo. Te amo tanto. Mi niño, felices 5 mesesitos.",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/mano.png",
         "siguiente": None
     },
 
@@ -585,6 +594,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Imagina cuando programemos un juego buenísimo. Sé que quiero hacerlo contigo, quiero planearlo.",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/shy.png",
         "siguiente": 63
     },
     63: {
