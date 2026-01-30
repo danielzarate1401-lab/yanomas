@@ -676,18 +676,18 @@ if st.session_state.jugando:
     if "manos" in escena:
         manos_html = f'<img src="{escena["manos"]}" class="manos-overlay">'
     
-    # 2. Marco de la Consola y Pantalla
+    # 2. Marco de la Consola
     st.markdown('<div class="marco-consola">', unsafe_allow_html=True)
     
-    # Aquí combinamos Fondo (URL), Personaje y Manos
+    # Renderizamos la pantalla con: Fondo (imagen), Personaje y Manos
     st.markdown(f'''
-        <div class="pantalla-juego" style="background-image: url('{escena.get('fondo', '')}');">
-            <img src="{escena["personaje"]}" class="personaje-img">
+        <div class="pantalla-juego" style="background-image: url('{escena.get('imagen', '')}'); background-size: cover; background-position: center;">
+            <img src="{escena.get('personaje', '')}" class="personaje-img">
             {manos_html}
         </div>
         <div class="dialogo-box">
-            <div class="nombre-personaje">{escena.get("nombre", "???")}</div>
-            <div style="font-size: 16px; line-height: 1.3;">{escena["texto"]}</div>
+            <div class="nombre-personaje">{escena.get('nombre', '???')}</div>
+            <div style="font-size: 16px; line-height: 1.3;">{escena.get('texto', '')}</div>
         </div>
     ''', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True) 
@@ -701,7 +701,7 @@ if st.session_state.jugando:
                 st.rerun()
     else:
         if st.button("Continuar", key="btn_next_global"):
-            if escena["siguiente"] is not None:
+            if escena.get("siguiente") is not None:
                 st.session_state.paso = escena["siguiente"]
                 st.rerun()
             else:
@@ -718,19 +718,9 @@ if st.session_state.jugando:
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
 
 else:
-    # PANTALLA DE INICIO
-    st.markdown("""
-        <div class="caja-titulo">
-            <h1> Felices 5 Meses amor</h1>
-        </div>
-    """, unsafe_allow_html=True)
-
-    # Marco de la consola para el inicio
-    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 200px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
-    st.markdown('<p style="color:white; font-family:Quicksand; font-size: 18px;">Para el mejor novio del mundo</p>', unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Botón para empezar
+    # PANTALLA DE INICIO (Se mantiene igual)
+    st.markdown('<div class="caja-titulo"><h1> Felices 5 Meses amor</h1></div>', unsafe_allow_html=True)
+    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 200px; display:flex; flex-direction:column; justify-content:center;"><p style="color:white; font-family:Quicksand; font-size: 18px;">Para el mejor novio del mundo</p></div>', unsafe_allow_html=True)
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if st.button("Empezar", key="btn_start"):
         st.session_state.jugando = True
