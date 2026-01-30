@@ -668,10 +668,10 @@ historia = {
 
 # --- 4. LÓGICA DE PANTALLAS ---
 if st.session_state.jugando:
-    # Usamos .get para evitar que la app explote si falta un paso
+    # Obtenemos la escena actual
     escena = historia.get(st.session_state.paso, historia[0])
     
-    # 1. Definir el overlay de manos
+    # Manejo de manos (Overlay)
     manos_html = ""
     if "manos" in escena:
         manos_html = f'<img src="{escena["manos"]}" class="manos-overlay">'
@@ -681,7 +681,8 @@ if st.session_state.jugando:
     st.markdown(f'''
         <div class="pantalla-juego">
             <img src="{escena["imagen"]}" class="personaje-img">
-            {manos_html}  </div>
+            {manos_html}
+        </div>
         <div class="dialogo-box">
             <div class="nombre-personaje">{escena["personaje"]}</div>
             <div style="font-size: 16px; line-height: 1.3;">{escena["texto"]}</div>
@@ -689,14 +690,16 @@ if st.session_state.jugando:
     ''', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True) 
 
-    # Botones
+    # Contenedor de Botones
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if "opciones" in escena:
         for i, opcion in enumerate(escena["opciones"]):
+            # Key única por paso y opción para evitar errores de duplicados
             if st.button(opcion["texto"], key=f"btn_{st.session_state.paso}_{i}"):
                 st.session_state.paso = opcion["destino"]
                 st.rerun()
     else:
+        # Botón único de continuar
         if st.button("Continuar", key=f"btn_next_{st.session_state.paso}"):
             if escena.get("siguiente") is not None:
                 st.session_state.paso = escena["siguiente"]
@@ -706,12 +709,31 @@ if st.session_state.jugando:
                 st.rerun()
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # Audio (Optimizado)
+    # Audio
     if "musica" in escena:
         if escena["musica"] != st.session_state.musica_actual:
             st.session_state.musica_actual = escena["musica"]
-            
+    
     if st.session_state.musica_actual and st.session_state.musica_actual != "ninguna":
-        # Usamos una columna vacía para que el reproductor no estorbe visualmente
-        with st.empty():
-            st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
+        st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
+
+else:
+    # --- PANTALLA DE INICIO (RESTABLECIDA) ---
+    st.markdown("""
+        <div class="caja-titulo">
+            <h1> Felices 5 Meses amor</h1>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # El marco de la consola
+    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 200px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
+    st.markdown('<p style="color:white; font-family:Quicksand; font-size: 18px;">Para el mejor novio del mundo</p>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    # El botón para empezar
+    st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
+    if st.button("Empezar", key="btn_start"):
+        st.session_state.jugando = True
+        st.session_state.paso = 0
+        st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
