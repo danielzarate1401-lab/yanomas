@@ -120,7 +120,6 @@ st.markdown("""
     height: 85%; /* Misma altura que el personaje */
     z-index: 3;  /* Un nivel arriba para que tape al personaje */
     position: absolute; 
-    top: 0;    
     filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.4));
     pointer-events: none; /* Evita que las manos "bloqueen" los clics */
 }
