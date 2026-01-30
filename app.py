@@ -203,6 +203,7 @@ historia = {
         "personaje": "Daniel",
         "texto": "Hola, mi niño, hoy cumplimos un mes más de relación y ahora que es parte de otro año quiero que sea más especial.",
         "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
+        "manos": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/mano.png",
         "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/31%20minutos%20-%20Karaoke%20-%20Yo%20opino.mp3",
         "siguiente": 1
     },
@@ -613,31 +614,31 @@ historia = {
     67: {
         "personaje": "Daniel",
         "texto": "...Mpa, Map, Pma, Vox, Charlie Kirk, Mexican Seafood, Anexorcist, Adoptado, Adoptadito, Tusk, Periwinkle, Coca de Dieta, Nuggets, Kira, Akira, Michi, Whiplash, Orion, Blackened...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/chibi.png",
         "siguiente": 68
     },
     68: {
         "personaje": "Daniel",
         "texto": "...Serv, Makima, Varka, Treintaiun Minutos, Venecolano, Venecalono, Iv, Cloe, C++,  KKK, Copi-Copi, Elemento, Adjetivo, Mente en Blanco, Chaucha, Yo Soy, Calugoso, Duquesa, Reina...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/chibi.png",
         "siguiente": 69
     },
     69: {
         "personaje": "Daniel",
         "texto": "...Coliforme, Tepo-Tepo, Yo no Fui, Fierro Malo, Palmerita, Neumatex, Cortachurro, Etcétera, Maletín, Duque, Guasón, Jefe, Moneda, Cucky, Pelusa, Tía, Legui, Reality...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/chibi.png",
         "siguiente": 70
     },
     70: {
         "personaje": "Daniel",
         "texto": "...Chester, Chu, Ro, Playita, Palmera, Señor, Re Frito, Pescado, Chamuyo, Calendario, James Bond, Rata, Cabeza de Chaya, Neumático, Repetido, Añico, Rucia, Gonzo, Chino, Cortéz, Albertito.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/chibi.png",
         "siguiente": 71
     },
     71: {
         "personaje": "Daniel",
         "texto": "Bueno, ahora yendo con los que no queremos son... Ok ya paro. No sé, es lindo pensar en procrear contigo. Tener una familia. Tener cualquier cosa contigo.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/chibi.png",
         "siguiente": 72
     },
     72: {
