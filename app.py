@@ -339,19 +339,19 @@ historia = {
     22: {
         "personaje": "Daniel",
         "texto": "Feliz quinto mes btw.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 23
     },
     23: {
         "personaje": "Daniel",
         "texto": "Mi niño... Bueno, ya que me gusta ser mandoneado, me gustaría que respondas una pregunta:",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 24
     },
     24: {
         "personaje": "Daniel",
         "texto": "¿Qué quieres hacer?",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
         "musica": "ninguna",
         "opciones": [
             {"texto": "Recordar", "destino": 25},
@@ -361,172 +361,172 @@ historia = {
     25: {
         "personaje": "Daniel",
         "texto": "Hmmmm",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoSerio.png",
         "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/el%20profe.mp3",
         "siguiente": 26
     },
     26: {
         "personaje": "Daniel",
         "texto": "Sabes, no me gustaba mucho recordar las cosas... ",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoSerio.png",
         "siguiente": 27
     },
     27: {
         "personaje": "Daniel",
         "texto": "Nunca de hecho, es como un metodo de defenza para no deprimirme. ",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoSerio.png",
         "siguiente": 28
     },
     28: {
         "personaje": "Daniel",
         "texto": "Solo.... ",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoSerio.png",
         "siguiente": 29
     },
     29: {
         "personaje": "Daniel",
         "texto": "Cada que pensaba en el pasado... ",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoAbajo.png",
         "siguiente": 30
     },
     30: {
         "personaje": "Daniel",
         "texto": "...Me venian a la mente malos recuerdos ",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
         "siguiente": 31
     },
     31: {
         "personaje": "Daniel",
         "texto": "Momentos horribles",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 32
     },
     32: {
         "personaje": "Daniel",
         "texto": "Cosas de las que me arrepiento...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 33
     },
     33: {
         "personaje": "Daniel",
         "texto": "Dias que preferiria que no hayan existido. ",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
         "siguiente": 34
     },
     34: {
         "personaje": "Daniel",
         "texto": "Supongo que sabes como prefiero evitar los problemas, pero...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoAbajo.png",
         "siguiente": 35
     },
     35: {
         "personaje": "Daniel",
         "texto": "Ahora siento que algo cambia, y eso es que tu estas aqui conmigo :3",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
         "siguiente": 36
     },
     36: {
         "personaje": "Supuestamente Pam",
         "texto": "21 de Agosto de 2025... Justo andaba escuchando el OST de Undertale hace unos minutos. ¡Hahaha!",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/supuestapam.png",
         "siguiente": 37
     },
     37: {
         "personaje": "Daniel",
         "texto": "Jajajaj, ¿sí se escucha como Hopes and Dreams? Aún la sigo practicando. Justo el inicio se me complica un poquito.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 38
     },
     38: {
         "personaje": "Supuestamente Pam",
         "texto": "Para que te hagas una idea, ya con las primeras tres notas supe que era Hopes and Dreams....",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/supuestapam.png",
         "siguiente": 39
     },
     39: {
         "personaje": "Daniel",
         "texto": "Fue tan simple, pero de un momento para otro, una ligera forma de querer llamar tu atención funcionó. Me hizo feliz. Capté la atención del que no sabía que sería el mejor novio del mundo.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 40
     },
     40: {
         "personaje": "Daniel",
         "texto": "¿Recuerdas cómo fue cuando te pregunté si querías ser mi pareja? Sonabas tan decaído en ese momento, tan triste por lo que estabas pasando...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "animacion": "shake",
         "siguiente": 41
     },
     41: {
         "personaje": "Daniel",
         "texto": "Y yo, ciertamente te quería hacer feliz. Quizás es algo en lo que a veces no tengo tacto, pero me alegro de que desde ese día seamos pareja.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 42
     },
     42: {
         "personaje": "Daniel",
         "texto": "Hemos vivido muchos momentos graciosos y bonitos, como la vez que hicimos al Kris y a Ralsei, o dibujos en conjunto como Caín y Abel.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
         "siguiente": 43
     },
     43: {
         "personaje": "Daniel",
         "texto": "Cuando vimos Hazbin Hotel... ¡Por ti empecé a ver South Park, lo que me recuerda todos los personajes con los que nos identificamos:",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 44
     },
     44: {
         "personaje": "Daniel",
         "texto": "Somos Ralsei y Kris, Pinkie Pie y Sunset, Tweek y Craig, Charlie y Nick, Charlie y Pim, Charlie y Vaggie, Charlie y Kirk, Trump y Satanás...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 45
     },
     45: {
         "personaje": "Daniel",
         "texto": "...Elle y Tao, Johnny y Gyro, Denji y Asa, las torres gemelas y el avión... y por supuesto que somos Sonic y Shadow. :3",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 46
     },
     46: {
         "personaje": "Daniel",
         "texto": "¿Recuerdas cuando jugamos a tener una tienda? Fue tan divertido ese día. 'Te quiero presentar al oso, el amor de mi... es como un hijo para mí'.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 47
     },
     47: {
         "personaje": "Supuestamente Pam",
         "texto": "'¡NOO, TÚ NO IBAS A DECIR ESO!' '¿POR QUÉ ACTUABAS COMO SI NO ME IBA A DAR CUENTA?'. Amo, amo pasar tiempo contigo. Es tan divertido cuando estamos en llamada...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/supuestapam.png",
         "siguiente": 75
     },
     48: {
         "personaje": "Daniel",
         "texto": "Ciertamente, también hemos tenido malos momentos. Momentos en los que nos sentimos decaídos, con ganas de llorar por problemas adversos o incluso por el otro.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoSerio.png",
         "animacion": "shake",
         "siguiente": 49
     },
     49: {
         "personaje": "Daniel",
         "texto": "Son cosas por las que también hemos pasado. Te he hecho daño. Son malos recuerdos... pero no es algo que quiera olvidar.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoSerio.png",
         "siguiente": 50
     },
     50: {
         "personaje": "Daniel",
         "texto": "No quiero volver a equivocarme, ni a dañarte. No quiero ser alguien más que te haga daño. No quiero actuar como si nunca hice nada malo, porque no mereces que ignore cosas que sí pasaron.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 51
     },
     51: {
         "personaje": "Daniel",
         "texto": "Mereces que aprenda de mis equivocaciones, las solucione y las afronte. Porque eres alguien que vale la pena, porque me motivas a ser mejor persona.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 52
     },
     52: {
         "personaje": "Daniel",
         "texto": "Porque eres alguien que vale la pena, porque me motivas a ser mejor persona. Te amo. Te amo tanto. Mi niño, felices 5 mesesitos.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": None
     },
 
@@ -661,7 +661,7 @@ historia = {
     75: {
         "personaje": "Daniel", # Cambia por el link de la emoción
         "texto": "hmmm...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoSerio.png",
         "siguiente": 48  
     },
 }
