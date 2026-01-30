@@ -202,7 +202,7 @@ historia = {
     0: {
         "personaje": "Daniel",
         "texto": "Hola, mi niño, hoy cumplimos un mes más de relación y ahora que es parte de otro año quiero que sea más especial.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
         "musica": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/31%20minutos%20-%20Karaoke%20-%20Yo%20opino.mp3",
         "siguiente": 1
     },
