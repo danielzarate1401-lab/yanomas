@@ -744,7 +744,7 @@ else:
         <div class="marco-consola" style="text-align:center; padding: 20px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
             
             <img src="https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/chibi.png" 
-                 style="width: 160px; margin-bottom: 15px;">
+                 style="width: 2480px; margin-bottom: 15px;">
             
             <p style="color:white; font-family:Quicksand; font-size: 18px; margin: 0;">
                 Para el mejor novio del mundo
