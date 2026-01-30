@@ -209,80 +209,80 @@ historia = {
     1: {
         "personaje": "Daniel",
         "texto": "Quiero dar lo mejor de mí para ti y por ambos. Por nuestro futuro y pasado, quiero aprender muchas más cosas.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 2
     },
     2: {
         "personaje": "Daniel",
         "texto": "Este año quiero aprender a programar, a vivir y a ser un novio tan bueno como tú.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 3
     },
     3: {
         "personaje": "Daniel",
         "texto": "Porque aunque tú digas lo contrario, eres el mejor novio del mundo; tan maravilloso y unico",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
         "animacion": "shake",
         "siguiente": 4
     },
     4: {
         "personaje": "Daniel",
         "texto": "Jamás me había sentido tan querido y correspondido por alguien.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 5
     },
     5: {
         "personaje": "Daniel",
         "texto": "Haces que quiera dejar de huir de los problemas. Haces que me sienta bien conmigo mismo.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoAbajo.png",
         "siguiente": 6
     },
     6: {
         "personaje": "Daniel",
         "texto": "Haces que quiera dar más de mí sin sentirme presionado. Te amo tanto, gracias por ser tú.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
         "siguiente": 7
     },
     7: {
         "personaje": "Daniel",
-        "texto": "Quiero que sepas que doy lo mejor de mi para ti, porque eres alguien que lo merece.",
-        "imagen": img_def,
+        "texto": "Quiero que sepas que doy lo mejor de mi, para ti, porque eres alguien que lo merece.",
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 8
     },
     8: {
         "personaje": "Daniel",
         "texto": "Mi niño",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoAbajo.png",
         "siguiente": 9
     },
     9: {
         "personaje": "Daniel",
         "texto": "Te gusta esta novela visual?",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 10
     },
     10: {
         "personaje": "Daniel",
         "texto": "Tiene muchos personajes y eso, soy yo y... yo y.... también estoy yo... y sans deltarune ",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 11
     },
     11: {
         "personaje": "Daniel",
         "texto": "Ah y estas tu, creo ",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
         "siguiente": 12
     },
     12: {
         "personaje": "Daniel",
         "texto": "Bueno, como otras novelas visuales esta tiene opciones de dialogo. Viste? Asi se bueno soy.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoAbajo.png",
         "siguiente": 13
     },
     13: {
         "personaje": "Daniel",
         "texto": "Que te parece?",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
          "opciones": [
             {"texto": "Menea la chapa remix", "destino": 14},
             {"texto": "Amarillo amarillo platano", "destino": 14}
@@ -291,49 +291,49 @@ historia = {
     14: {
         "personaje": "Daniel",
         "texto": "Yo se, increible...",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/CerradoFrente.png",
         "siguiente": 15
     },
     15: {
         "personaje": "Daniel",
         "texto": "Oye",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
         "siguiente": 16
     },
     16: {
         "personaje": "Daniel",
         "texto": "Me gustas",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 17
     },
     17: {
         "personaje": "Daniel",
         "texto": "Me gustas mucho",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 18
     },
     18: {
         "personaje": "Daniel",
         "texto": "Me gustas tanto que quiero esforzarme",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Abiertoblush.png",
         "siguiente": 19
     },
     19: {
         "personaje": "Daniel",
         "texto": "Tanto como para pensar en el pasado de forma bonita... ",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
         "siguiente": 20
     },
     20: {
         "personaje": "Daniel",
         "texto": "...O como para esforzarme por un buen futuro.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/Cerradoblush.png",
         "siguiente": 21
     },
     21: {
         "personaje": "Daniel",
         "texto": "Mi niño lindo.",
-        "imagen": img_def,
+        "imagen": "https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/AbiertoFrente.png",
         "siguiente": 22
     },
     22: {
