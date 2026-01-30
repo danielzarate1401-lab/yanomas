@@ -730,25 +730,30 @@ if st.session_state.jugando:
         st.audio(st.session_state.musica_actual, format="audio/mp3", autoplay=True, loop=True)
 
 else:
-    # PANTALLA DE INICIO
-    st.markdown(f'''
-        <div style="text-align: center;">
-            <img src="https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/pony.png" width="150">
-        </div>
-    ''', unsafe_allow_html=True)
-
+    # --- PANTALLA DE INICIO ---
+    
+    # 1. Título arriba (fuera del brillo)
     st.markdown("""
         <div class="caja-titulo">
             <h1> Felices 5 Meses amor</h1>
         </div>
     """, unsafe_allow_html=True)
 
-    # El marco de la consola
-    st.markdown('<div class="marco-consola" style="text-align:center; min-height: 200px; display:flex; flex-direction:column; justify-content:center;">', unsafe_allow_html=True)
-    st.markdown('<p style="color:white; font-family:Quicksand; font-size: 18px;">Para el mejor novio del mundo</p>', unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+    # 2. El marco de la consola (TODO lo que esté aquí adentro tendrá el brillo)
+    st.markdown(f'''
+        <div class="marco-consola" style="text-align:center; padding: 20px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+            
+            <img src="https://raw.githubusercontent.com/danielzarate1401-lab/yanomas/main/pony.png" 
+                 style="width: 160px; margin-bottom: 15px;">
+            
+            <p style="color:white; font-family:Quicksand; font-size: 18px; margin: 0;">
+                Para el mejor novio del mundo
+            </p>
+            
+        </div>
+    ''', unsafe_allow_html=True)
     
-    # El botón para empezar
+    # 3. El botón para empezar
     st.markdown('<div class="contenedor-botones">', unsafe_allow_html=True)
     if st.button("Empezar", key="btn_start"):
         st.session_state.jugando = True
